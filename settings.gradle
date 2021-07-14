@@ -1,0 +1,5 @@
+include ':zhugeioanalytics'
+include ':zhugeiodemox'
+include ':zhugeiodemo'
+include ':zhugeioanalytics-android-plugin'
+rootProject.name = "zhugeio-sdk-android"

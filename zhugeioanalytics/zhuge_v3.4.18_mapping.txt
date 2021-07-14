@@ -1,0 +1,2029 @@
+# compiler: R8
+# compiler_version: 2.0.88
+# pg_map_id: 760b75d
+# common_typos_disable
+com.zhuge.analysis.deepshare.Configuration -> com.zhuge.analysis.deepshare.a:
+    com.zhuge.analysis.deepshare.Configuration config -> c
+    android.content.Context context -> b
+    android.content.SharedPreferences preference -> a
+    1:3:void <init>(android.content.Context):35:37 -> <init>
+    1:4:com.zhuge.analysis.deepshare.Configuration getInstance(android.content.Context):41:44 -> a
+    5:11:java.lang.String getAppKey():52:58 -> a
+    12:12:java.lang.String getString(java.lang.String):112:112 -> a
+    13:13:void setString(java.lang.String,java.lang.String):116:116 -> a
+    1:1:void setAppKey(java.lang.String):68:68 -> b
+    2:4:java.lang.String getAppVersion():145:147 -> b
+    1:1:void setClickId(java.lang.String):84:84 -> c
+    2:4:int getAppVersionCode():158:160 -> c
+    1:1:void setDeepLinkId(java.lang.String):100:100 -> d
+    2:4:java.lang.String getCarrier():170:172 -> d
+    1:1:void setInitKey(java.lang.String):76:76 -> e
+    2:2:java.lang.String getClickId():80:80 -> e
+    1:1:void setInstallChannels(java.lang.String):92:92 -> f
+    2:2:java.lang.String getDeepLinkId():96:96 -> f
+    1:1:void setScheme(java.lang.String):108:108 -> g
+    2:2:java.lang.String getHardwareId():136:136 -> g
+    1:1:java.lang.String getInitKey():72:72 -> h
+    1:1:java.lang.String getInstallChannels():88:88 -> i
+    1:1:com.zhuge.analysis.deepshare.Configuration getInstance():48:48 -> j
+    java.lang.String getOS() -> k
+    1:1:java.lang.String getOSRelease():192:192 -> l
+    1:1:java.lang.String getPhoneBrand():181:181 -> m
+    1:1:java.lang.String getPhoneModel():185:185 -> n
+    1:1:java.lang.String getScheme():104:104 -> o
+    1:9:java.lang.String getUniqueID():120:128 -> p
+    1:1:boolean hasRealHardwareId():140:140 -> q
+    1:1:boolean isNetworkPermissionGranted():204:204 -> r
+    1:4:boolean isWifiConnected():195:198 -> s
+com.zhuge.analysis.deepshare.DeepShare -> com.zhuge.analysis.deepshare.DeepShare:
+    1:1:void <init>():18:18 -> <init>
+    1:4:void attribute(java.util.HashMap,com.zhuge.analysis.listeners.DSFailListener):53:56 -> attribute
+    1:4:void clearNewUsageFromMe(com.zhuge.analysis.listeners.DSFailListener):131:134 -> clearNewUsageFromMe
+    1:17:java.lang.String[] getInstallChannels():93:109 -> getInstallChannels
+    1:4:void getNewUsageFromMe(com.zhuge.analysis.listeners.NewUsageFromMeListener):119:122 -> getNewUsageFromMe
+    1:4:java.lang.String getSenderId():78:81 -> getSenderId
+    1:15:void init(android.app.Activity,java.lang.String,com.zhuge.analysis.listeners.ZhugeInAppDataListener):29:43 -> init
+    1:4:void onStop():66:69 -> onStop
+com.zhuge.analysis.deepshare.DeepShareImpl -> com.zhuge.analysis.deepshare.b:
+    com.zhuge.analysis.deepshare.Configuration config -> a
+    android.content.Context context -> b
+    com.zhuge.analysis.deepshare.UiServerMessageHandler handler -> c
+    1:11:void <init>(android.content.Context,java.lang.String):32:42 -> <init>
+    12:17:void <init>(android.content.Context,java.lang.String):33:38 -> <init>
+    1:31:boolean initSession(com.zhuge.analysis.listeners.ZhugeInAppDataListener,boolean,android.net.Uri,java.lang.String):50:80 -> a
+    32:32:void close():91:91 -> a
+    33:33:void getNewUsageFromMe(com.zhuge.analysis.listeners.NewUsageFromMeListener):95:95 -> a
+    34:34:void clearUsageFromMe(com.zhuge.analysis.listeners.DSFailListener):99:99 -> a
+    35:36:void changeValueBy(java.util.HashMap,com.zhuge.analysis.listeners.DSFailListener):104:105 -> a
+    1:1:boolean hasUser():87:87 -> b
+com.zhuge.analysis.deepshare.DeepShareImpl$1 -> com.zhuge.analysis.deepshare.b$a:
+    1:1:void <init>(com.zhuge.analysis.deepshare.DeepShareImpl):42:42 -> <init>
+    1:1:void processEvent(com.zhuge.analysis.deepshare.protocol.ServerMessage):45:45 -> a
+com.zhuge.analysis.deepshare.ServerMessageHandler -> com.zhuge.analysis.deepshare.c:
+    void handleServerMessage(java.util.ArrayList) -> a
+com.zhuge.analysis.deepshare.ServerMessageMgr -> com.zhuge.analysis.deepshare.d:
+    com.zhuge.analysis.deepshare.ServerMessageHandler handler -> c
+    android.os.Handler localHandler -> a
+    java.util.ArrayList pendingList -> e
+    android.os.HandlerThread handlerThread -> b
+    com.zhuge.analysis.deepshare.ServerMessageMgr instance -> f
+    com.zhuge.analysis.deepshare.ServerMessageMgr$FireRunnable fireRunnable -> d
+    1:1:void <clinit>():17:17 -> <clinit>
+    1:8:void <init>():26:33 -> <init>
+    1:1:java.util.ArrayList access$100(com.zhuge.analysis.deepshare.ServerMessageMgr):14:14 -> a
+    2:2:java.util.ArrayList access$102(com.zhuge.analysis.deepshare.ServerMessageMgr,java.util.ArrayList):14:14 -> a
+    3:3:com.zhuge.analysis.deepshare.ServerMessageMgr getInstance():37:37 -> a
+    4:4:void registerHandler(com.zhuge.analysis.deepshare.ServerMessageHandler):48:48 -> a
+    5:10:void fireServerMessage(com.zhuge.analysis.deepshare.protocol.ServerMessage):66:71 -> a
+    1:1:com.zhuge.analysis.deepshare.ServerMessageHandler access$200(com.zhuge.analysis.deepshare.ServerMessageMgr):14:14 -> b
+    1:1:com.zhuge.analysis.deepshare.ServerMessageMgr$FireRunnable access$300(com.zhuge.analysis.deepshare.ServerMessageMgr):14:14 -> c
+    1:1:android.os.Handler access$400(com.zhuge.analysis.deepshare.ServerMessageMgr):14:14 -> d
+com.zhuge.analysis.deepshare.ServerMessageMgr$1 -> com.zhuge.analysis.deepshare.d$a:
+com.zhuge.analysis.deepshare.ServerMessageMgr$FireRunnable -> com.zhuge.analysis.deepshare.d$b:
+    com.zhuge.analysis.deepshare.ServerMessageMgr this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.deepshare.ServerMessageMgr):74:74 -> <init>
+    2:2:void <init>(com.zhuge.analysis.deepshare.ServerMessageMgr,com.zhuge.analysis.deepshare.ServerMessageMgr$1):74:74 -> <init>
+    1:45:void run():77:121 -> run
+com.zhuge.analysis.deepshare.UiServerMessageHandler -> com.zhuge.analysis.deepshare.e:
+    android.os.Handler localHandler -> a
+    1:2:void <init>():13:14 -> <init>
+    void processEvent(com.zhuge.analysis.deepshare.protocol.ServerMessage) -> a
+    1:1:void handleServerMessage(java.util.ArrayList):19:19 -> a
+com.zhuge.analysis.deepshare.UiServerMessageHandler$MyRunnable -> com.zhuge.analysis.deepshare.e$a:
+    com.zhuge.analysis.deepshare.UiServerMessageHandler this$0 -> b
+    java.util.ArrayList msgs -> a
+    1:2:void <init>(com.zhuge.analysis.deepshare.UiServerMessageHandler,java.util.ArrayList):27:28 -> <init>
+    1:2:void run():33:34 -> run
+com.zhuge.analysis.deepshare.protocol.ServerHttpRespJsonMessage -> com.zhuge.analysis.deepshare.f.a:
+    org.json.JSONObject obj -> h
+    1:1:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage):19:19 -> <init>
+    2:2:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage):16:16 -> <init>
+    void getPayload(org.json.JSONObject) -> a
+    1:32:void receive(byte[]):24:55 -> a
+    1:4:java.lang.String toString():71:74 -> toString
+com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage -> com.zhuge.analysis.deepshare.f.b:
+    java.lang.String err -> f
+    boolean isClientBadRequest -> g
+    com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage sent -> e
+    1:1:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage):11:11 -> <init>
+    2:8:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage):7:13 -> <init>
+    void receive(byte[]) -> a
+    1:2:void setError(java.lang.String):21:22 -> a
+    3:3:void setIsClientBadRequest(boolean):27:27 -> a
+    1:1:java.lang.String getError():17:17 -> j
+    1:1:com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage getRequest():41:41 -> k
+    1:1:boolean isClientBadRequest():31:31 -> l
+    1:1:boolean isOk():35:35 -> m
+    1:1:java.lang.String toString():46:46 -> toString
+com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage -> com.zhuge.analysis.deepshare.f.c:
+    com.zhuge.analysis.deepshare.Configuration config -> i
+    org.json.JSONObject obj -> h
+    1:1:void <init>(android.content.Context):25:25 -> <init>
+    2:6:void <init>(android.content.Context):22:26 -> <init>
+    org.json.JSONObject getJSONObject(com.zhuge.analysis.deepshare.Configuration) -> a
+    1:12:int send(java.io.OutputStream):58:69 -> a
+    13:14:void setRequestProperty(java.net.HttpURLConnection):78:79 -> a
+    java.lang.String getMethod() -> k
+    1:15:boolean prepare():34:48 -> o
+    1:4:java.lang.String toString():89:92 -> toString
+com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage -> com.zhuge.analysis.deepshare.f.d:
+    java.lang.String password -> g
+    java.lang.String username -> f
+    com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage response -> e
+    1:1:void <init>():17:17 -> <init>
+    2:6:void <init>():14:18 -> <init>
+    int send(java.io.OutputStream) -> a
+    1:9:void setRequestProperty(java.net.HttpURLConnection):38:46 -> a
+    com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage buildResponse() -> j
+    java.lang.String getMethod() -> k
+    1:1:com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage getResponse():52:52 -> l
+    java.lang.String getUrlPath() -> m
+    1:1:void init():57:57 -> n
+    boolean prepare() -> o
+com.zhuge.analysis.deepshare.protocol.ServerMessage -> com.zhuge.analysis.deepshare.f.e:
+    int currentSession -> d
+    int sendRetry -> b
+    int session -> c
+    int recvRetry -> a
+    1:1:void <init>():13:13 -> <init>
+    2:7:void <init>():9:14 -> <init>
+    1:1:int getRecvRetry():38:38 -> a
+    1:1:int getSendRetry():50:50 -> b
+    1:1:boolean isSessionOutDate():62:62 -> c
+    1:1:void newSession():18:18 -> d
+    1:4:boolean nextRecvRetry():30:33 -> e
+    1:4:boolean nextSendRetry():42:45 -> f
+    void processResponse() -> g
+    1:1:void resetSendRetry():54:54 -> h
+    1:1:void saveSession():58:58 -> i
+com.zhuge.analysis.deepshare.protocol.ServerNetworkError -> com.zhuge.analysis.deepshare.f.f:
+    int subwhy -> f
+    int why -> e
+    1:3:void <init>(com.zhuge.analysis.deepshare.protocol.ServerMessage,int,int):13:15 -> <init>
+    1:1:void processResponse():38:38 -> g
+    1:1:int getSubWhy():28:28 -> j
+    1:1:int getWhy():24:24 -> k
+    1:1:java.lang.String toString():33:33 -> toString
+com.zhuge.analysis.deepshare.protocol.ServerNetworkMessage -> com.zhuge.analysis.deepshare.f.g:
+    1:1:void <init>():5:5 -> <init>
+    int getRecvRetry() -> a
+com.zhuge.analysis.deepshare.protocol.httprespmessages.ChangeValueByRespMessage -> com.zhuge.analysis.deepshare.f.h.a:
+    1:1:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage):14:14 -> <init>
+    void getPayload(org.json.JSONObject) -> a
+    1:6:void processResponse():25:30 -> g
+com.zhuge.analysis.deepshare.protocol.httprespmessages.ClearUsageRespMessage -> com.zhuge.analysis.deepshare.f.h.b:
+    1:1:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage):14:14 -> <init>
+    void getPayload(org.json.JSONObject) -> a
+    1:4:void processResponse():24:27 -> g
+com.zhuge.analysis.deepshare.protocol.httprespmessages.CloseRespMessage -> com.zhuge.analysis.deepshare.f.h.c:
+    1:1:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage):13:13 -> <init>
+    void getPayload(org.json.JSONObject) -> a
+    1:1:void processResponse():22:22 -> g
+com.zhuge.analysis.deepshare.protocol.httprespmessages.InstallRespMessage -> com.zhuge.analysis.deepshare.f.h.d:
+    org.json.JSONObject data -> i
+    1:1:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage):17:17 -> <init>
+    1:20:void getPayload(org.json.JSONObject):23:42 -> a
+    1:11:void processResponse():49:59 -> g
+    1:1:org.json.JSONObject getParams():64:64 -> n
+com.zhuge.analysis.deepshare.protocol.httprespmessages.NewUsageRespMessage -> com.zhuge.analysis.deepshare.f.h.e:
+    int new_open -> j
+    int new_install -> i
+    1:1:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage):16:16 -> <init>
+    1:2:void getPayload(org.json.JSONObject):22:23 -> a
+    1:6:void processResponse():28:33 -> g
+    1:1:int getNewInstall():42:42 -> n
+    1:1:int getNewOpen():38:38 -> o
+com.zhuge.analysis.deepshare.protocol.httprespmessages.OpenRespMessage -> com.zhuge.analysis.deepshare.f.h.f:
+    org.json.JSONObject data -> i
+    1:1:void <init>(com.zhuge.analysis.deepshare.protocol.ServerHttpSendJsonMessage):17:17 -> <init>
+    1:16:void getPayload(org.json.JSONObject):23:38 -> a
+    1:11:void processResponse():45:55 -> g
+    1:1:org.json.JSONObject getParams():60:60 -> n
+com.zhuge.analysis.deepshare.protocol.httpsendmessages.ChangeValueByMessage -> com.zhuge.analysis.deepshare.f.i.a:
+    com.zhuge.analysis.listeners.DSFailListener listener -> l
+    org.json.JSONArray countersArray -> k
+    org.json.JSONObject receiverInfo -> j
+    1:1:void <init>(android.content.Context,java.util.HashMap,com.zhuge.analysis.listeners.DSFailListener):33:33 -> <init>
+    2:25:void <init>(android.content.Context,java.util.HashMap,com.zhuge.analysis.listeners.DSFailListener):22:45 -> <init>
+    1:4:org.json.JSONObject getJSONObject(com.zhuge.analysis.deepshare.Configuration):50:53 -> a
+    1:1:com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage buildResponse():64:64 -> j
+    1:1:java.lang.String getUrlPath():69:69 -> m
+    1:1:com.zhuge.analysis.listeners.DSFailListener getListener():59:59 -> p
+com.zhuge.analysis.deepshare.protocol.httpsendmessages.ClearUsageMessage -> com.zhuge.analysis.deepshare.f.i.b:
+    com.zhuge.analysis.listeners.DSFailListener listener -> j
+    1:2:void <init>(android.content.Context,com.zhuge.analysis.listeners.DSFailListener):20:21 -> <init>
+    1:1:org.json.JSONObject getJSONObject(com.zhuge.analysis.deepshare.Configuration):26:26 -> a
+    1:1:com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage buildResponse():39:39 -> j
+    java.lang.String getMethod() -> k
+    1:1:java.lang.String getUrlPath():49:49 -> m
+    1:1:com.zhuge.analysis.listeners.DSFailListener getListener():34:34 -> p
+com.zhuge.analysis.deepshare.protocol.httpsendmessages.CloseMessage -> com.zhuge.analysis.deepshare.f.i.c:
+    org.json.JSONObject receiverInfo -> j
+    1:1:void <init>(android.content.Context):19:19 -> <init>
+    2:2:void <init>(android.content.Context):16:16 -> <init>
+    1:15:org.json.JSONObject getJSONObject(com.zhuge.analysis.deepshare.Configuration):24:38 -> a
+    1:1:com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage buildResponse():45:45 -> j
+    1:1:java.lang.String getUrlPath():50:50 -> m
+com.zhuge.analysis.deepshare.protocol.httpsendmessages.InstallMessage -> com.zhuge.analysis.deepshare.f.i.d:
+    com.zhuge.analysis.listeners.ZhugeInAppDataListener listener -> j
+    1:2:void <init>(android.content.Context,com.zhuge.analysis.listeners.ZhugeInAppDataListener):22:23 -> <init>
+    1:65:org.json.JSONObject getJSONObject(com.zhuge.analysis.deepshare.Configuration):32:96 -> a
+    1:1:com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage buildResponse():102:102 -> j
+    1:1:java.lang.String getUrlPath():107:107 -> m
+    1:1:com.zhuge.analysis.listeners.ZhugeInAppDataListener getListener():27:27 -> p
+com.zhuge.analysis.deepshare.protocol.httpsendmessages.NewUsageMessage -> com.zhuge.analysis.deepshare.f.i.e:
+    com.zhuge.analysis.listeners.NewUsageFromMeListener listener -> j
+    1:2:void <init>(android.content.Context,com.zhuge.analysis.listeners.NewUsageFromMeListener):20:21 -> <init>
+    1:1:org.json.JSONObject getJSONObject(com.zhuge.analysis.deepshare.Configuration):27:27 -> a
+    1:1:com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage buildResponse():40:40 -> j
+    java.lang.String getMethod() -> k
+    1:1:java.lang.String getUrlPath():50:50 -> m
+    1:1:com.zhuge.analysis.listeners.NewUsageFromMeListener getListener():35:35 -> p
+com.zhuge.analysis.deepshare.protocol.httpsendmessages.OpenMessage -> com.zhuge.analysis.deepshare.f.i.f:
+    com.zhuge.analysis.listeners.ZhugeInAppDataListener listener -> j
+    1:2:void <init>(android.content.Context,com.zhuge.analysis.listeners.ZhugeInAppDataListener):22:23 -> <init>
+    1:64:org.json.JSONObject getJSONObject(com.zhuge.analysis.deepshare.Configuration):32:95 -> a
+    1:1:com.zhuge.analysis.deepshare.protocol.ServerHttpRespMessage buildResponse():102:102 -> j
+    1:1:java.lang.String getUrlPath():107:107 -> m
+    1:1:com.zhuge.analysis.listeners.ZhugeInAppDataListener getListener():27:27 -> p
+com.zhuge.analysis.deepshare.transport.ServerHttpConnection -> com.zhuge.analysis.deepshare.g.a:
+    com.zhuge.analysis.deepshare.transport.ServerHttpConnection instance -> d
+    java.util.concurrent.ConcurrentLinkedQueue queue -> b
+    boolean networkAvailable -> c
+    java.util.concurrent.ExecutorService executorService -> a
+    1:12:void <init>():27:38 -> <init>
+    1:1:java.util.concurrent.ConcurrentLinkedQueue access$000(com.zhuge.analysis.deepshare.transport.ServerHttpConnection):27:27 -> a
+    2:2:boolean access$100(com.zhuge.analysis.deepshare.transport.ServerHttpConnection,com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage):27:27 -> a
+    3:13:void reset(int):41:51 -> a
+    14:14:boolean execute(com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage):71:71 -> a
+    1:3:void send(com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage):55:57 -> b
+    1:5:void sendInternal(com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage):61:65 -> c
+com.zhuge.analysis.deepshare.transport.ServerHttpConnection$HandleSendMessage -> com.zhuge.analysis.deepshare.g.a$a:
+    long startTick -> b
+    com.zhuge.analysis.deepshare.transport.ServerHttpConnection this$0 -> d
+    byte[] content -> c
+    com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage msg -> a
+    1:1:void <init>(com.zhuge.analysis.deepshare.transport.ServerHttpConnection,com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage):84:84 -> <init>
+    2:7:void <init>(com.zhuge.analysis.deepshare.transport.ServerHttpConnection,com.zhuge.analysis.deepshare.protocol.ServerHttpSendMessage):80:85 -> <init>
+    1:5:boolean checkSession():89:93 -> a
+    6:19:void processNext(com.zhuge.analysis.deepshare.protocol.ServerMessage):100:113 -> a
+    1:125:void run():120:244 -> run
+    126:207:void run():163:244 -> run
+    208:274:void run():178:244 -> run
+    275:335:void run():184:244 -> run
+    336:389:void run():191:244 -> run
+    390:425:void run():209:244 -> run
+    426:436:void run():234:244 -> run
+    437:447:void run():229:239 -> run
+    448:500:void run():224:276 -> run
+    501:513:void run():234:246 -> run
+com.zhuge.analysis.deepshare.utils.Log -> com.zhuge.analysis.deepshare.h.a:
+    1:1:boolean isDebug():54:54 -> a
+    2:6:int d(java.lang.String,java.lang.String):103:107 -> a
+    7:7:java.lang.String getStackTraceString(java.lang.Throwable):309:309 -> a
+    1:1:int e(java.lang.String,java.lang.String):232:232 -> b
+    1:5:int i(java.lang.String,java.lang.String):140:144 -> c
+    1:5:int w(java.lang.String,java.lang.String):177:181 -> d
+com.zhuge.analysis.deepshare.utils.Util -> com.zhuge.analysis.deepshare.h.b:
+    org.json.JSONArray inappDataTime -> b
+    long startTicks -> a
+    org.json.JSONArray generateURLTime -> c
+    org.json.JSONArray attributeTime -> d
+    1:3:void initUtil():23:25 -> a
+    4:13:org.json.JSONObject escapeJSONStrings(org.json.JSONObject):29:38 -> a
+    14:25:org.json.JSONObject getJSONObject(java.lang.String):48:59 -> a
+com.zhuge.analysis.java_websocket.WebSocket -> com.zhuge.analysis.java_websocket.WebSocket:
+    java.net.InetSocketAddress getLocalSocketAddress() -> a
+    void sendFrame(com.zhuge.analysis.java_websocket.framing.Framedata) -> a
+com.zhuge.analysis.java_websocket.WebSocket$READYSTATE -> com.zhuge.analysis.java_websocket.WebSocket$READYSTATE:
+    1:1:void <clinit>():17:17 -> <clinit>
+    2:2:void <clinit>():16:16 -> <clinit>
+    1:1:void <init>(java.lang.String,int):16:16 -> <init>
+    1:1:com.zhuge.analysis.java_websocket.WebSocket$READYSTATE valueOf(java.lang.String):16:16 -> valueOf
+    1:1:com.zhuge.analysis.java_websocket.WebSocket$READYSTATE[] values():16:16 -> values
+com.zhuge.analysis.java_websocket.WebSocket$Role -> com.zhuge.analysis.java_websocket.WebSocket$Role:
+    1:1:void <clinit>():13:13 -> <clinit>
+    2:2:void <clinit>():12:12 -> <clinit>
+    1:1:void <init>(java.lang.String,int):12:12 -> <init>
+    1:1:com.zhuge.analysis.java_websocket.WebSocket$Role valueOf(java.lang.String):12:12 -> valueOf
+    1:1:com.zhuge.analysis.java_websocket.WebSocket$Role[] values():12:12 -> values
+com.zhuge.analysis.java_websocket.WebSocketAdapter -> com.zhuge.analysis.java_websocket.a:
+    1:1:void <init>():19:19 -> <init>
+    void onWebsocketHandshakeReceivedAsClient(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake) -> a
+    void onWebsocketHandshakeSentAsClient(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.handshake.ClientHandshake) -> a
+    void onWebsocketPong(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.framing.Framedata) -> a
+    1:1:com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.drafts.Draft,com.zhuge.analysis.java_websocket.handshake.ClientHandshake):28:28 -> a
+    2:12:java.lang.String getFlashPolicy(com.zhuge.analysis.java_websocket.WebSocket):91:101 -> a
+    13:13:java.lang.String getFlashPolicy(com.zhuge.analysis.java_websocket.WebSocket):93:93 -> a
+    1:3:void onWebsocketPing(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.framing.Framedata):61:63 -> b
+com.zhuge.analysis.java_websocket.WebSocketImpl -> com.zhuge.analysis.java_websocket.b:
+    java.nio.ByteBuffer tmpHandshakeBytes -> k
+    com.zhuge.analysis.java_websocket.WebSocketListener wsl -> f
+    java.lang.String closemessage -> m
+    java.util.List defaultdraftlist -> s
+    java.nio.channels.SelectionKey key -> a
+    java.lang.Boolean closedremotely -> o
+    java.lang.String resourceDescriptor -> p
+    boolean DEBUG -> r
+    java.util.concurrent.BlockingQueue outQueue -> c
+    boolean $assertionsDisabled -> t
+    com.zhuge.analysis.java_websocket.framing.Framedata$Opcode current_continuous_frame_opcode -> j
+    com.zhuge.analysis.java_websocket.drafts.Draft draft -> h
+    com.zhuge.analysis.java_websocket.WebSocket$Role role -> i
+    com.zhuge.analysis.java_websocket.handshake.ClientHandshake handshakerequest -> l
+    java.nio.channels.ByteChannel channel -> b
+    java.util.List knownDrafts -> g
+    java.lang.Integer closecode -> n
+    com.zhuge.analysis.java_websocket.WebSocket$READYSTATE readystate -> e
+    int RCVBUF -> q
+    boolean flushandclosestate -> d
+    1:14:void <clinit>():50:63 -> <clinit>
+    1:1:void <init>(com.zhuge.analysis.java_websocket.WebSocketListener,com.zhuge.analysis.java_websocket.drafts.Draft):139:139 -> <init>
+    2:60:void <init>(com.zhuge.analysis.java_websocket.WebSocketListener,com.zhuge.analysis.java_websocket.drafts.Draft):89:147 -> <init>
+    61:61:void <init>(com.zhuge.analysis.java_websocket.WebSocketListener,com.zhuge.analysis.java_websocket.drafts.Draft):141:141 -> <init>
+    1:19:void decode(java.nio.ByteBuffer):164:182 -> a
+    20:25:void dealErrorMessage(java.lang.String):420:425 -> a
+    26:60:void close(int,java.lang.String,boolean):430:464 -> a
+    61:61:void close(int,java.lang.String):471:471 -> a
+    62:62:void closeConnection(int,boolean):511:511 -> a
+    63:63:void close(com.zhuge.analysis.java_websocket.exceptions.InvalidDataException):569:569 -> a
+    64:67:void send(java.util.Collection):604:607 -> a
+    68:68:void send(java.util.Collection):605:605 -> a
+    69:69:void sendFragmentedFrame(com.zhuge.analysis.java_websocket.framing.Framedata$Opcode,java.nio.ByteBuffer,boolean):613:613 -> a
+    70:72:void sendFrame(com.zhuge.analysis.java_websocket.framing.Framedata):618:620 -> a
+    73:93:void startHandshake(com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder):647:667 -> a
+    94:95:void startHandshake(com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder):662:663 -> a
+    96:96:void startHandshake(com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder):660:660 -> a
+    97:98:void write(java.util.List):686:687 -> a
+    99:105:void open(com.zhuge.analysis.java_websocket.handshake.Handshakedata):692:698 -> a
+    106:106:java.net.InetSocketAddress getLocalSocketAddress():751:751 -> a
+    1:76:void decodeFrames(java.nio.ByteBuffer):333:408 -> b
+    77:77:void decodeFrames(java.nio.ByteBuffer):384:384 -> b
+    78:81:void decodeFrames(java.nio.ByteBuffer):366:369 -> b
+    82:87:void decodeFrames(java.nio.ByteBuffer):368:373 -> b
+    88:96:void decodeFrames(java.nio.ByteBuffer):372:380 -> b
+    97:135:void decodeFrames(java.nio.ByteBuffer):375:413 -> b
+    136:161:void closeConnection(int,java.lang.String,boolean):482:507 -> b
+    162:162:void closeConnection(int,java.lang.String):522:522 -> b
+    163:175:void eot():547:559 -> b
+    1:61:boolean decodeHandshake(java.nio.ByteBuffer):191:251 -> c
+    62:63:boolean decodeHandshake(java.nio.ByteBuffer):245:246 -> c
+    64:122:boolean decodeHandshake(java.nio.ByteBuffer):242:300 -> c
+    123:124:boolean decodeHandshake(java.nio.ByteBuffer):296:297 -> c
+    125:156:boolean decodeHandshake(java.nio.ByteBuffer):293:324 -> c
+    157:174:void flushAndClose(int,java.lang.String,boolean):526:543 -> c
+    175:175:com.zhuge.analysis.java_websocket.WebSocket$READYSTATE getReadyState():731:731 -> c
+    1:14:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState isFlashEdgeCase(java.nio.ByteBuffer):629:642 -> d
+    15:15:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState isFlashEdgeCase(java.nio.ByteBuffer):633:633 -> d
+    16:16:boolean isClosed():726:726 -> d
+    1:12:void write(java.nio.ByteBuffer):671:682 -> e
+    13:13:boolean isClosing():716:716 -> e
+    1:1:boolean isFlushAndClose():721:721 -> f
+    1:2:boolean isOpen():710:711 -> g
+    1:1:int hashCode():736:736 -> hashCode
+    1:1:java.lang.String toString():741:741 -> toString
+com.zhuge.analysis.java_websocket.WebSocketListener -> com.zhuge.analysis.java_websocket.c:
+    java.lang.String getFlashPolicy(com.zhuge.analysis.java_websocket.WebSocket) -> a
+    void onWebsocketClose(com.zhuge.analysis.java_websocket.WebSocket,int,java.lang.String,boolean) -> a
+    void onWebsocketCloseInitiated(com.zhuge.analysis.java_websocket.WebSocket,int,java.lang.String) -> a
+    void onWebsocketError(com.zhuge.analysis.java_websocket.WebSocket,java.lang.Exception) -> a
+    void onWebsocketHandshakeReceivedAsClient(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake) -> a
+    com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder onWebsocketHandshakeReceivedAsServer(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.drafts.Draft,com.zhuge.analysis.java_websocket.handshake.ClientHandshake) -> a
+    void onWebsocketHandshakeSentAsClient(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.handshake.ClientHandshake) -> a
+    void onWebsocketMessage(com.zhuge.analysis.java_websocket.WebSocket,java.lang.String) -> a
+    void onWebsocketMessage(com.zhuge.analysis.java_websocket.WebSocket,java.nio.ByteBuffer) -> a
+    void onWebsocketOpen(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.handshake.Handshakedata) -> a
+    void onWebsocketPong(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.framing.Framedata) -> a
+    void onWebsocketClosing(com.zhuge.analysis.java_websocket.WebSocket,int,java.lang.String,boolean) -> b
+    void onWebsocketPing(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.framing.Framedata) -> b
+    void onWriteDemand(com.zhuge.analysis.java_websocket.WebSocket) -> b
+    java.net.InetSocketAddress getLocalSocketAddress(com.zhuge.analysis.java_websocket.WebSocket) -> c
+    void onWebsocketMessageFragment(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.framing.Framedata) -> c
+com.zhuge.analysis.java_websocket.client.WebSocketClient -> com.zhuge.analysis.java_websocket.d.a:
+    com.zhuge.analysis.java_websocket.WebSocketImpl engine -> b
+    java.io.OutputStream ostream -> e
+    int connectTimeout -> k
+    boolean $assertionsDisabled -> l
+    java.net.URI uri -> a
+    java.util.concurrent.CountDownLatch connectLatch -> i
+    java.io.InputStream istream -> d
+    java.util.concurrent.CountDownLatch closeLatch -> j
+    java.lang.Thread writeThread -> g
+    java.net.Socket socket -> c
+    java.net.Proxy proxy -> f
+    java.util.Map headers -> h
+    1:1:void <clinit>():34:34 -> <clinit>
+    1:1:void <init>(java.net.URI,com.zhuge.analysis.java_websocket.drafts.Draft,java.util.Map,int):80:80 -> <init>
+    2:52:void <init>(java.net.URI,com.zhuge.analysis.java_websocket.drafts.Draft,java.util.Map,int):40:90 -> <init>
+    53:53:void <init>(java.net.URI,com.zhuge.analysis.java_websocket.drafts.Draft,java.util.Map,int):84:84 -> <init>
+    54:54:void <init>(java.net.URI,com.zhuge.analysis.java_websocket.drafts.Draft,java.util.Map,int):82:82 -> <init>
+    void onClose(int,java.lang.String,boolean) -> a
+    void onCloseInitiated(int,java.lang.String) -> a
+    void onError(java.lang.Exception) -> a
+    void onMessage(java.lang.String) -> a
+    void onMessage(java.nio.ByteBuffer) -> a
+    void onOpen(com.zhuge.analysis.java_websocket.handshake.ServerHandshake) -> a
+    1:1:com.zhuge.analysis.java_websocket.WebSocketImpl access$100(com.zhuge.analysis.java_websocket.client.WebSocketClient):35:35 -> a
+    2:2:void onWebsocketMessage(com.zhuge.analysis.java_websocket.WebSocket,java.lang.String):251:251 -> a
+    3:3:void onWebsocketMessage(com.zhuge.analysis.java_websocket.WebSocket,java.nio.ByteBuffer):256:256 -> a
+    4:5:void onWebsocketOpen(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.handshake.Handshakedata):269:270 -> a
+    6:16:void onWebsocketClose(com.zhuge.analysis.java_websocket.WebSocket,int,java.lang.String,boolean):278:288 -> a
+    17:17:void onWebsocketError(com.zhuge.analysis.java_websocket.WebSocket,java.lang.Exception):296:296 -> a
+    18:18:void onWebsocketCloseInitiated(com.zhuge.analysis.java_websocket.WebSocket,int,java.lang.String):306:306 -> a
+    19:22:void setSocket(java.net.Socket):383:386 -> a
+    23:23:void setSocket(java.net.Socket):384:384 -> a
+    24:24:void sendFragmentedFrame(com.zhuge.analysis.java_websocket.framing.Framedata$Opcode,java.nio.ByteBuffer,boolean):391:391 -> a
+    25:25:void sendFrame(com.zhuge.analysis.java_websocket.framing.Framedata):446:446 -> a
+    26:26:java.net.InetSocketAddress getLocalSocketAddress():451:451 -> a
+    void onClosing(int,java.lang.String,boolean) -> b
+    void onFragment(com.zhuge.analysis.java_websocket.framing.Framedata) -> b
+    void onWriteDemand(com.zhuge.analysis.java_websocket.WebSocket) -> b
+    1:1:java.io.OutputStream access$200(com.zhuge.analysis.java_websocket.client.WebSocketClient):35:35 -> b
+    2:5:void connect():111:114 -> b
+    6:6:void connect():112:112 -> b
+    7:7:void onWebsocketClosing(com.zhuge.analysis.java_websocket.WebSocket,int,java.lang.String,boolean):311:311 -> b
+    1:3:boolean connectBlocking():122:124 -> c
+    4:4:void onWebsocketMessageFragment(com.zhuge.analysis.java_websocket.WebSocket,com.zhuge.analysis.java_websocket.framing.Framedata):261:261 -> c
+    5:6:java.net.InetSocketAddress getLocalSocketAddress(com.zhuge.analysis.java_websocket.WebSocket):326:327 -> c
+    1:9:int getPort():201:209 -> d
+    1:1:boolean isClosed():406:406 -> e
+    1:1:boolean isClosing():411:411 -> f
+    1:1:boolean isFlushAndClose():401:401 -> g
+    1:20:void sendHandshake():217:236 -> h
+    1:34:void run():162:195 -> run
+    35:41:void run():191:197 -> run
+    42:52:void run():165:175 -> run
+com.zhuge.analysis.java_websocket.client.WebSocketClient$1 -> com.zhuge.analysis.java_websocket.d.a$a:
+com.zhuge.analysis.java_websocket.client.WebSocketClient$WebsocketWriteThread -> com.zhuge.analysis.java_websocket.d.a$b:
+    com.zhuge.analysis.java_websocket.client.WebSocketClient this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.java_websocket.client.WebSocketClient):353:353 -> <init>
+    2:2:void <init>(com.zhuge.analysis.java_websocket.client.WebSocketClient,com.zhuge.analysis.java_websocket.client.WebSocketClient$1):353:353 -> <init>
+    1:9:void run():356:364 -> run
+com.zhuge.analysis.java_websocket.drafts.Draft -> com.zhuge.analysis.java_websocket.drafts.Draft:
+    com.zhuge.analysis.java_websocket.WebSocket$Role role -> a
+    com.zhuge.analysis.java_websocket.framing.Framedata$Opcode continuousFrameType -> b
+    byte[] FLASH_POLICY_REQUEST -> d
+    int INITIAL_FAMESIZE -> c
+    1:1:void <clinit>():52:52 -> <clinit>
+    1:28:void <init>():32:59 -> <init>
+    com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake) -> a
+    com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake) -> a
+    com.zhuge.analysis.java_websocket.drafts.Draft copyInstance() -> a
+    java.nio.ByteBuffer createBinaryFrame(com.zhuge.analysis.java_websocket.framing.Framedata) -> a
+    com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder postProcessHandshakeRequestAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder) -> a
+    com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder postProcessHandshakeResponseAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder) -> a
+    1:16:java.nio.ByteBuffer readLine(java.nio.ByteBuffer):62:77 -> a
+    17:45:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder translateHandshakeHttp(java.nio.ByteBuffer,com.zhuge.analysis.java_websocket.WebSocket$Role):88:116 -> a
+    46:51:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder translateHandshakeHttp(java.nio.ByteBuffer,com.zhuge.analysis.java_websocket.WebSocket$Role):114:119 -> a
+    52:52:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder translateHandshakeHttp(java.nio.ByteBuffer,com.zhuge.analysis.java_websocket.WebSocket$Role):94:94 -> a
+    53:53:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder translateHandshakeHttp(java.nio.ByteBuffer,com.zhuge.analysis.java_websocket.WebSocket$Role):90:90 -> a
+    54:54:boolean basicAccept(com.zhuge.analysis.java_websocket.handshake.Handshakedata):128:128 -> a
+    55:77:java.util.List continuousFrame(com.zhuge.analysis.java_websocket.framing.Framedata$Opcode,java.nio.ByteBuffer,boolean):138:160 -> a
+    78:78:java.util.List continuousFrame(com.zhuge.analysis.java_websocket.framing.Framedata$Opcode,java.nio.ByteBuffer,boolean):152:152 -> a
+    79:79:java.util.List createHandshake(com.zhuge.analysis.java_websocket.handshake.Handshakedata,com.zhuge.analysis.java_websocket.WebSocket$Role):166:166 -> a
+    80:109:java.util.List createHandshake(com.zhuge.analysis.java_websocket.handshake.Handshakedata,com.zhuge.analysis.java_websocket.WebSocket$Role,boolean):170:199 -> a
+    110:110:java.util.List createHandshake(com.zhuge.analysis.java_websocket.handshake.Handshakedata,com.zhuge.analysis.java_websocket.WebSocket$Role,boolean):178:178 -> a
+    111:111:int checkAlloc(int):222:222 -> a
+    112:112:void setParseMode(com.zhuge.analysis.java_websocket.WebSocket$Role):227:227 -> a
+    com.zhuge.analysis.java_websocket.drafts.Draft$CloseHandshakeType getCloseHandshakeType() -> b
+    1:2:java.lang.String readStringLine(java.nio.ByteBuffer):82:83 -> b
+    void reset() -> c
+    java.util.List translateFrame(java.nio.ByteBuffer) -> c
+    1:1:com.zhuge.analysis.java_websocket.handshake.Handshakedata translateHandshake(java.nio.ByteBuffer):217:217 -> d
+com.zhuge.analysis.java_websocket.drafts.Draft$CloseHandshakeType -> com.zhuge.analysis.java_websocket.drafts.Draft$CloseHandshakeType:
+    1:1:void <clinit>():46:46 -> <clinit>
+    2:2:void <clinit>():45:45 -> <clinit>
+    1:1:void <init>(java.lang.String,int):45:45 -> <init>
+    1:1:com.zhuge.analysis.java_websocket.drafts.Draft$CloseHandshakeType valueOf(java.lang.String):45:45 -> valueOf
+    1:1:com.zhuge.analysis.java_websocket.drafts.Draft$CloseHandshakeType[] values():45:45 -> values
+com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState -> com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState:
+    1:5:void <clinit>():38:42 -> <clinit>
+    6:6:void <clinit>():34:34 -> <clinit>
+    1:1:void <init>(java.lang.String,int):34:34 -> <init>
+    1:1:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState valueOf(java.lang.String):34:34 -> valueOf
+    1:1:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState[] values():34:34 -> values
+com.zhuge.analysis.java_websocket.drafts.Draft_10 -> com.zhuge.analysis.java_websocket.drafts.a:
+    java.util.Random reuseableRandom -> f
+    java.nio.ByteBuffer incompleteframe -> e
+    boolean $assertionsDisabled -> g
+    1:1:void <clinit>():34:34 -> <clinit>
+    1:38:void <init>():35:72 -> <init>
+    1:9:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake):76:84 -> a
+    10:10:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake):77:77 -> a
+    11:14:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake):90:93 -> a
+    15:15:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake):92:92 -> a
+    16:49:java.nio.ByteBuffer createBinaryFrame(com.zhuge.analysis.java_websocket.framing.Framedata):98:131 -> a
+    50:50:java.nio.ByteBuffer createBinaryFrame(com.zhuge.analysis.java_websocket.framing.Framedata):118:118 -> a
+    51:63:byte fromOpcode(com.zhuge.analysis.java_websocket.framing.Framedata$Opcode):165:177 -> a
+    64:72:java.lang.String generateFinalKey(java.lang.String):181:189 -> a
+    73:73:java.lang.String generateFinalKey(java.lang.String):187:187 -> a
+    74:80:com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder postProcessHandshakeRequestAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder):194:200 -> a
+    81:87:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder postProcessHandshakeResponseAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder):207:213 -> a
+    88:88:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder postProcessHandshakeResponseAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder):212:212 -> a
+    89:92:byte[] toByteArray(long,int):218:221 -> a
+    93:93:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode toOpcode(byte):243:243 -> a
+    94:94:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode toOpcode(byte):240:240 -> a
+    95:95:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode toOpcode(byte):238:238 -> a
+    96:96:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode toOpcode(byte):236:236 -> a
+    97:97:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode toOpcode(byte):233:233 -> a
+    98:98:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode toOpcode(byte):231:231 -> a
+    99:99:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode toOpcode(byte):229:229 -> a
+    100:100:com.zhuge.analysis.java_websocket.drafts.Draft copyInstance():395:395 -> a
+    1:5:int readVersion(com.zhuge.analysis.java_websocket.handshake.Handshakedata):56:60 -> b
+    6:6:com.zhuge.analysis.java_websocket.drafts.Draft$CloseHandshakeType getCloseHandshakeType():400:400 -> b
+    1:49:java.util.List translateFrame(java.nio.ByteBuffer):249:297 -> c
+    50:50:void reset():390:390 -> c
+    1:33:com.zhuge.analysis.java_websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer):305:337 -> e
+    34:85:com.zhuge.analysis.java_websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer):333:384 -> e
+    86:86:com.zhuge.analysis.java_websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer):361:361 -> e
+    87:87:com.zhuge.analysis.java_websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer):348:348 -> e
+    88:88:com.zhuge.analysis.java_websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer):341:341 -> e
+    89:89:com.zhuge.analysis.java_websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer):328:328 -> e
+    90:90:com.zhuge.analysis.java_websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer):313:313 -> e
+    91:91:com.zhuge.analysis.java_websocket.framing.Framedata translateSingleFrame(java.nio.ByteBuffer):308:308 -> e
+com.zhuge.analysis.java_websocket.drafts.Draft_10$IncompleteException -> com.zhuge.analysis.java_websocket.drafts.a$a:
+    int preferedsize -> a
+    1:2:void <init>(com.zhuge.analysis.java_websocket.drafts.Draft_10,int):46:47 -> <init>
+    1:1:int getPreferedSize():51:51 -> a
+com.zhuge.analysis.java_websocket.drafts.Draft_17 -> com.zhuge.analysis.java_websocket.drafts.b:
+    1:1:void <init>():7:7 -> <init>
+    1:4:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake):10:13 -> a
+    5:6:com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder postProcessHandshakeRequestAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder):18:19 -> a
+    7:7:com.zhuge.analysis.java_websocket.drafts.Draft copyInstance():25:25 -> a
+com.zhuge.analysis.java_websocket.drafts.Draft_75 -> com.zhuge.analysis.java_websocket.drafts.c:
+    java.util.Random reuseableRandom -> h
+    java.util.List readyframes -> f
+    java.nio.ByteBuffer currentFrame -> g
+    boolean readingState -> e
+    1:28:void <init>():26:53 -> <init>
+    1:1:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake):57:57 -> a
+    2:5:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake):62:65 -> a
+    6:17:java.nio.ByteBuffer createBinaryFrame(com.zhuge.analysis.java_websocket.framing.Framedata):70:81 -> a
+    18:18:java.nio.ByteBuffer createBinaryFrame(com.zhuge.analysis.java_websocket.framing.Framedata):71:71 -> a
+    19:22:com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder postProcessHandshakeRequestAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder):106:109 -> a
+    23:28:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder postProcessHandshakeResponseAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder):117:122 -> a
+    29:29:com.zhuge.analysis.java_websocket.drafts.Draft copyInstance():206:206 -> a
+    1:1:com.zhuge.analysis.java_websocket.drafts.Draft$CloseHandshakeType getCloseHandshakeType():190:190 -> b
+    1:3:java.util.List translateFrame(java.nio.ByteBuffer):175:177 -> c
+    4:5:void reset():184:185 -> c
+    1:1:java.nio.ByteBuffer createBuffer():194:194 -> d
+    1:3:java.nio.ByteBuffer increaseBuffer(java.nio.ByteBuffer):198:200 -> e
+    1:6:java.util.List translateRegularFrame(java.nio.ByteBuffer):129:134 -> f
+    7:24:java.util.List translateRegularFrame(java.nio.ByteBuffer):133:150 -> f
+    25:57:java.util.List translateRegularFrame(java.nio.ByteBuffer):137:169 -> f
+com.zhuge.analysis.java_websocket.drafts.Draft_76 -> com.zhuge.analysis.java_websocket.drafts.d:
+    java.util.Random reuseableRandom -> j
+    boolean failed -> i
+    byte[] closehandshake -> k
+    1:1:void <clinit>():33:33 -> <clinit>
+    1:5:void <init>():31:35 -> <init>
+    1:26:byte[] createChallenge(java.lang.String,java.lang.String,byte[]):39:64 -> a
+    27:27:byte[] createChallenge(java.lang.String,java.lang.String,byte[]):62:62 -> a
+    28:34:byte[] getPart(java.lang.String):98:104 -> a
+    35:40:byte[] getPart(java.lang.String):101:106 -> a
+    41:56:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake):112:127 -> a
+    57:57:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake):122:122 -> a
+    58:70:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshake):118:130 -> a
+    71:73:com.zhuge.analysis.java_websocket.drafts.Draft$HandshakeState acceptHandshakeAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake):136:138 -> a
+    74:85:com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder postProcessHandshakeRequestAsClient(com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder):143:154 -> a
+    86:98:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder postProcessHandshakeResponseAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder):161:173 -> a
+    99:99:com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder postProcessHandshakeResponseAsServer(com.zhuge.analysis.java_websocket.handshake.ClientHandshake,com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder):171:171 -> a
+    100:102:java.nio.ByteBuffer createBinaryFrame(com.zhuge.analysis.java_websocket.framing.Framedata):231:233 -> a
+    103:103:com.zhuge.analysis.java_websocket.drafts.Draft copyInstance():243:243 -> a
+    1:1:com.zhuge.analysis.java_websocket.drafts.Draft$CloseHandshakeType getCloseHandshakeType():238:238 -> b
+    1:25:java.util.List translateFrame(java.nio.ByteBuffer):197:221 -> c
+    26:26:java.util.List translateFrame(java.nio.ByteBuffer):209:209 -> c
+    27:27:java.util.List translateFrame(java.nio.ByteBuffer):206:206 -> c
+    1:10:com.zhuge.analysis.java_websocket.handshake.Handshakedata translateHandshake(java.nio.ByteBuffer):180:189 -> d
+    11:11:com.zhuge.analysis.java_websocket.handshake.Handshakedata translateHandshake(java.nio.ByteBuffer):187:187 -> d
+    1:24:java.lang.String generateKey():68:91 -> e
+com.zhuge.analysis.java_websocket.exceptions.IncompleteHandshakeException -> com.zhuge.analysis.java_websocket.e.a:
+    int newsize -> a
+    1:2:void <init>(int):8:9 -> <init>
+    3:4:void <init>():12:13 -> <init>
+    1:1:int getPreferedSize():17:17 -> a
+com.zhuge.analysis.java_websocket.exceptions.InvalidDataException -> com.zhuge.analysis.java_websocket.e.b:
+    int closecode -> a
+    1:2:void <init>(int):11:12 -> <init>
+    3:4:void <init>(int,java.lang.String):16:17 -> <init>
+    5:6:void <init>(int,java.lang.Throwable):21:22 -> <init>
+    1:1:int getCloseCode():31:31 -> a
+com.zhuge.analysis.java_websocket.exceptions.InvalidFrameException -> com.zhuge.analysis.java_websocket.e.c:
+    1:1:void <init>():13:13 -> <init>
+    2:2:void <init>(java.lang.String):17:17 -> <init>
+    3:3:void <init>(java.lang.Throwable):21:21 -> <init>
+com.zhuge.analysis.java_websocket.exceptions.InvalidHandshakeException -> com.zhuge.analysis.java_websocket.e.d:
+    1:1:void <init>():13:13 -> <init>
+    2:2:void <init>(java.lang.String):21:21 -> <init>
+com.zhuge.analysis.java_websocket.exceptions.LimitExedeedException -> com.zhuge.analysis.java_websocket.e.e:
+    1:1:void <init>(java.lang.String):17:17 -> <init>
+com.zhuge.analysis.java_websocket.exceptions.NotSendableException -> com.zhuge.analysis.java_websocket.e.f:
+com.zhuge.analysis.java_websocket.exceptions.WebsocketNotConnectedException -> com.zhuge.analysis.java_websocket.e.g:
+    1:1:void <init>():3:3 -> <init>
+com.zhuge.analysis.java_websocket.framing.CloseFrame -> com.zhuge.analysis.java_websocket.framing.a:
+    java.lang.String getMessage() -> b
+    int getCloseCode() -> c
+com.zhuge.analysis.java_websocket.framing.CloseFrameBuilder -> com.zhuge.analysis.java_websocket.framing.b:
+    java.lang.String reason -> g
+    java.nio.ByteBuffer emptybytebuffer -> h
+    int code -> f
+    1:1:void <clinit>():11:11 -> <clinit>
+    1:2:void <init>():17:18 -> <init>
+    3:5:void <init>(int):22:24 -> <init>
+    6:8:void <init>(int,java.lang.String):28:30 -> <init>
+    1:15:void setCodeAndMessage(int,java.lang.String):43:57 -> a
+    16:18:void setPayload(java.nio.ByteBuffer):112:114 -> a
+    1:1:java.lang.String getMessage():102:102 -> b
+    1:1:int getCloseCode():80:80 -> c
+    1:3:java.nio.ByteBuffer getPayloadData():119:121 -> d
+    1:15:void initCloseCode():61:75 -> g
+    1:12:void initMessage():84:95 -> h
+    13:16:void initMessage():93:96 -> h
+    1:1:java.lang.String toString():107:107 -> toString
+com.zhuge.analysis.java_websocket.framing.FrameBuilder -> com.zhuge.analysis.java_websocket.framing.c:
+    void setFin(boolean) -> a
+    void setOptcode(com.zhuge.analysis.java_websocket.framing.Framedata$Opcode) -> a
+    void setPayload(java.nio.ByteBuffer) -> a
+com.zhuge.analysis.java_websocket.framing.Framedata -> com.zhuge.analysis.java_websocket.framing.Framedata:
+    com.zhuge.analysis.java_websocket.framing.Framedata$Opcode getOpcode() -> a
+    java.nio.ByteBuffer getPayloadData() -> d
+    boolean isFin() -> e
+    boolean getTransfereMasked() -> f
+com.zhuge.analysis.java_websocket.framing.Framedata$Opcode -> com.zhuge.analysis.java_websocket.framing.Framedata$Opcode:
+    1:1:void <clinit>():9:9 -> <clinit>
+    2:2:void <clinit>():8:8 -> <clinit>
+    1:1:void <init>(java.lang.String,int):8:8 -> <init>
+    1:1:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode valueOf(java.lang.String):8:8 -> valueOf
+    1:1:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode[] values():8:8 -> values
+com.zhuge.analysis.java_websocket.framing.FramedataImpl1 -> com.zhuge.analysis.java_websocket.framing.d:
+    com.zhuge.analysis.java_websocket.framing.Framedata$Opcode optcode -> b
+    java.nio.ByteBuffer unmaskedpayload -> c
+    boolean fin -> a
+    byte[] emptyarray -> e
+    boolean transferemasked -> d
+    1:1:void <clinit>():11:11 -> <clinit>
+    1:1:void <init>():17:17 -> <init>
+    2:4:void <init>(com.zhuge.analysis.java_websocket.framing.Framedata$Opcode):20:22 -> <init>
+    5:9:void <init>(com.zhuge.analysis.java_websocket.framing.Framedata):29:33 -> <init>
+    1:1:com.zhuge.analysis.java_websocket.framing.Framedata$Opcode getOpcode():43:43 -> a
+    2:2:void setFin(boolean):58:58 -> a
+    3:3:void setOptcode(com.zhuge.analysis.java_websocket.framing.Framedata$Opcode):63:63 -> a
+    4:4:void setPayload(java.nio.ByteBuffer):68:68 -> a
+    1:1:java.nio.ByteBuffer getPayloadData():53:53 -> d
+    1:1:boolean isFin():38:38 -> e
+    1:1:boolean getTransfereMasked():48:48 -> f
+    1:1:java.lang.String toString():107:107 -> toString
+com.zhuge.analysis.java_websocket.handshake.ClientHandshake -> com.zhuge.analysis.java_websocket.f.a:
+    java.lang.String getResourceDescriptor() -> a
+com.zhuge.analysis.java_websocket.handshake.ClientHandshakeBuilder -> com.zhuge.analysis.java_websocket.f.b:
+    void setResourceDescriptor(java.lang.String) -> b
+com.zhuge.analysis.java_websocket.handshake.HandshakeBuilder -> com.zhuge.analysis.java_websocket.f.c:
+    void put(java.lang.String,java.lang.String) -> a
+    void setContent(byte[]) -> a
+com.zhuge.analysis.java_websocket.handshake.HandshakeImpl1Client -> com.zhuge.analysis.java_websocket.f.d:
+    java.lang.String resourceDescriptor -> c
+    1:1:void <init>():6:6 -> <init>
+    2:2:void <init>():4:4 -> <init>
+    1:1:java.lang.String getResourceDescriptor():16:16 -> a
+    1:1:void setResourceDescriptor(java.lang.String):12:12 -> b
+    2:2:void setResourceDescriptor(java.lang.String):11:11 -> b
+com.zhuge.analysis.java_websocket.handshake.HandshakeImpl1Server -> com.zhuge.analysis.java_websocket.f.e:
+    java.lang.String httpstatusmessage -> c
+    1:1:void <init>():7:7 -> <init>
+    void setHttpStatus(short) -> a
+    1:1:java.lang.String getHttpStatusMessage():12:12 -> b
+    1:1:void setHttpStatusMessage(java.lang.String):21:21 -> d
+com.zhuge.analysis.java_websocket.handshake.Handshakedata -> com.zhuge.analysis.java_websocket.f.f:
+    boolean hasFieldValue(java.lang.String) -> a
+    java.lang.String getFieldValue(java.lang.String) -> c
+    java.util.Iterator iterateHttpFields() -> c
+    byte[] getContent() -> d
+com.zhuge.analysis.java_websocket.handshake.HandshakedataImpl1 -> com.zhuge.analysis.java_websocket.f.g:
+    byte[] content -> a
+    java.util.TreeMap map -> b
+    1:2:void <init>():11:12 -> <init>
+    1:1:void setContent(byte[]):48:48 -> a
+    2:2:void put(java.lang.String,java.lang.String):53:53 -> a
+    3:3:boolean hasFieldValue(java.lang.String):58:58 -> a
+    1:1:java.util.Iterator iterateHttpFields():29:29 -> c
+    2:2:java.lang.String getFieldValue(java.lang.String):34:34 -> c
+    1:1:byte[] getContent():43:43 -> d
+com.zhuge.analysis.java_websocket.handshake.ServerHandshake -> com.zhuge.analysis.java_websocket.f.h:
+    java.lang.String getHttpStatusMessage() -> b
+com.zhuge.analysis.java_websocket.handshake.ServerHandshakeBuilder -> com.zhuge.analysis.java_websocket.f.i:
+    void setHttpStatus(short) -> a
+    void setHttpStatusMessage(java.lang.String) -> d
+com.zhuge.analysis.java_websocket.util.Base64 -> com.zhuge.analysis.java_websocket.g.a:
+    byte[] _STANDARD_DECODABET -> b
+    byte[] _STANDARD_ALPHABET -> a
+    boolean $assertionsDisabled -> g
+    byte[] _URL_SAFE_DECODABET -> d
+    byte[] _URL_SAFE_ALPHABET -> c
+    byte[] _ORDERED_DECODABET -> f
+    byte[] _ORDERED_ALPHABET -> e
+    1:236:void <clinit>():151:386 -> <clinit>
+    1:1:void <init>():467:467 -> <init>
+    1:1:byte[] access$000(int):152:152 -> a
+    2:2:int access$200(byte[],int,byte[],int,int):152:152 -> a
+    3:3:byte[] access$300(byte[],byte[],int,int):152:152 -> a
+    4:40:byte[] encode3to4(byte[],int,int,byte[],int,int):524:560 -> a
+    41:45:java.lang.String encodeBytes(byte[]):751:755 -> a
+    46:46:java.lang.String encodeBytes(byte[]):753:753 -> a
+    47:54:java.lang.String encodeBytes(byte[],int,int,int):857:864 -> a
+    1:5:byte[] getAlphabet(int):437:441 -> b
+    6:6:byte[] encode3to4(byte[],byte[],int,int):492:492 -> b
+    7:48:byte[] encodeBytesToBytes(byte[],int,int,int):922:963 -> b
+    49:115:byte[] encodeBytesToBytes(byte[],int,int,int):946:1012 -> b
+    116:117:byte[] encodeBytesToBytes(byte[],int,int,int):923:924 -> b
+    118:118:byte[] encodeBytesToBytes(byte[],int,int,int):919:919 -> b
+    119:119:byte[] encodeBytesToBytes(byte[],int,int,int):915:915 -> b
+    120:120:byte[] encodeBytesToBytes(byte[],int,int,int):911:911 -> b
+    121:175:int decode4to3(byte[],int,byte[],int,int):1069:1123 -> b
+    176:177:int decode4to3(byte[],int,byte[],int,int):1074:1075 -> b
+    178:178:int decode4to3(byte[],int,byte[],int,int):1074:1074 -> b
+    179:180:int decode4to3(byte[],int,byte[],int,int):1070:1071 -> b
+    181:181:int decode4to3(byte[],int,byte[],int,int):1070:1070 -> b
+    182:182:int decode4to3(byte[],int,byte[],int,int):1067:1067 -> b
+    183:183:int decode4to3(byte[],int,byte[],int,int):1064:1064 -> b
+    1:5:byte[] getDecodabet(int):455:459 -> c
+com.zhuge.analysis.java_websocket.util.Base64$OutputStream -> com.zhuge.analysis.java_websocket.g.a$a:
+    int options -> i
+    boolean breakLines -> f
+    byte[] b4 -> g
+    int bufferLength -> d
+    byte[] decodabet -> j
+    int lineLength -> e
+    boolean suspendEncoding -> h
+    boolean encode -> a
+    int position -> b
+    byte[] buffer -> c
+    1:11:void <init>(java.io.OutputStream,int):1939:1949 -> <init>
+    1:7:void flushBase64():2042:2048 -> a
+    1:8:void close():2063:2070 -> close
+    1:36:void write(int):1969:2004 -> write
+    37:43:void write(byte[],int,int):2023:2029 -> write
+com.zhuge.analysis.java_websocket.util.Charsetfunctions -> com.zhuge.analysis.java_websocket.g.b:
+    java.nio.charset.CodingErrorAction codingErrorAction -> a
+    1:1:void <clinit>():15:15 -> <clinit>
+    1:3:byte[] asciiBytes(java.lang.String):33:35 -> a
+    4:6:java.lang.String stringAscii(byte[],int,int):45:47 -> a
+    7:17:java.lang.String stringUtf8(java.nio.ByteBuffer):70:80 -> a
+    1:3:byte[] utf8Bytes(java.lang.String):22:24 -> b
+com.zhuge.analysis.listeners.DSFailListener -> com.zhuge.analysis.listeners.a:
+com.zhuge.analysis.listeners.NewUsageFromMeListener -> com.zhuge.analysis.listeners.b:
+    void onNewUsageFromMe(int,int) -> a
+com.zhuge.analysis.listeners.utils.Base64 -> com.zhuge.analysis.listeners.c.a:
+    1:1:byte[] decode(byte[],int):114:114 -> a
+    2:16:byte[] decode(byte[],int,int,int):136:150 -> a
+    17:17:byte[] decode(byte[],int,int,int):139:139 -> a
+    1:1:byte[] encode(byte[],int):210:210 -> b
+    2:38:byte[] encode(byte[],int,int,int):227:263 -> b
+com.zhuge.analysis.listeners.utils.Base64$Coder -> com.zhuge.analysis.listeners.c.a$a:
+    byte[] output -> a
+    int op -> b
+    1:1:void <init>():266:266 -> <init>
+com.zhuge.analysis.listeners.utils.Base64$Decoder -> com.zhuge.analysis.listeners.c.a$b:
+    int[] DECODE -> f
+    int[] DECODE_WEBSAFE -> g
+    int[] alphabet -> c
+    int state -> d
+    int value -> e
+    1:24:void <clinit>():297:320 -> <clinit>
+    1:6:void <init>(int,byte[]):357:362 -> <init>
+    1:127:boolean process(byte[],int,int,boolean):382:508 -> a
+    128:128:boolean process(byte[],int,int,boolean):501:501 -> a
+    129:142:boolean process(byte[],int,int,boolean):479:492 -> a
+    143:146:boolean process(byte[],int,int,boolean):467:470 -> a
+    147:147:boolean process(byte[],int,int,boolean):455:455 -> a
+    148:252:boolean process(byte[],int,int,boolean):445:549 -> a
+    253:254:boolean process(byte[],int,int,boolean):544:545 -> a
+    255:255:boolean process(byte[],int,int,boolean):539:539 -> a
+    256:280:boolean process(byte[],int,int,boolean):534:558 -> a
+com.zhuge.analysis.listeners.utils.Base64$Encoder -> com.zhuge.analysis.listeners.c.a$c:
+    byte[] ENCODE_WEBSAFE -> k
+    int tailLen -> h
+    int count -> i
+    boolean do_cr -> e
+    byte[] alphabet -> g
+    byte[] ENCODE -> j
+    boolean do_padding -> c
+    byte[] tail -> f
+    boolean do_newline -> d
+    1:12:void <clinit>():575:586 -> <clinit>
+    1:12:void <init>(int,byte[]):600:611 -> <init>
+    1:36:boolean process(byte[],int,int,boolean):626:661 -> a
+    37:155:boolean process(byte[],int,int,boolean):648:766 -> a
+com.zhuge.analysis.metrics.ResourceIds -> com.zhuge.analysis.a.a:
+    boolean knownIdName(java.lang.String) -> a
+    java.lang.String nameForId(int) -> a
+    int idFromName(java.lang.String) -> b
+com.zhuge.analysis.metrics.ResourceReader -> com.zhuge.analysis.a.b:
+    android.content.Context mContext -> a
+    java.util.Map mIdNameToId -> b
+    android.util.SparseArray mIdToIdName -> c
+    1:4:void <init>(android.content.Context):58:61 -> <init>
+    java.lang.String getLocalClassName(android.content.Context) -> a
+    java.lang.Class getSystemClass() -> a
+    1:1:boolean knownIdName(java.lang.String):66:66 -> a
+    2:2:java.lang.String nameForId(int):76:76 -> a
+    3:23:void readClassIds(java.lang.Class,java.lang.String,java.util.Map):88:108 -> a
+    1:1:int idFromName(java.lang.String):71:71 -> b
+    2:18:void initialize():117:133 -> b
+com.zhuge.analysis.metrics.ResourceReader$Ids -> com.zhuge.analysis.a.b$a:
+    java.lang.String mResourcePackageName -> d
+    1:3:void <init>(java.lang.String,android.content.Context):20:22 -> <init>
+    1:1:java.lang.Class getSystemClass():27:27 -> a
+    2:2:java.lang.String getLocalClassName(android.content.Context):32:32 -> a
+com.zhuge.analysis.metrics.Tweaks -> com.zhuge.analysis.a.c:
+    java.util.Map mTweakValues -> a
+    java.util.List mTweakDeclaredListeners -> b
+    1:3:void <init>():204:206 -> <init>
+    1:1:void addOnTweakDeclaredListener(com.zhuge.analysis.metrics.Tweaks$OnTweakDeclaredListener):26:26 -> a
+    2:2:void addOnTweakDeclaredListener(com.zhuge.analysis.metrics.Tweaks$OnTweakDeclaredListener):24:24 -> a
+    3:10:void set(java.lang.String,java.lang.Object):34:41 -> a
+    11:11:java.util.Map getAllValues():51:51 -> a
+com.zhuge.analysis.metrics.Tweaks$OnTweakDeclaredListener -> com.zhuge.analysis.a.c$a:
+com.zhuge.analysis.metrics.Tweaks$TweakValue -> com.zhuge.analysis.a.c$b:
+    java.lang.Object value -> b
+    java.lang.Number minimum -> d
+    java.lang.Object defaultValue -> c
+    java.lang.Number maximum -> e
+    int type -> a
+    1:6:void <init>(int,java.lang.Object,java.lang.Number,java.lang.Number,java.lang.Object):111:116 -> <init>
+    1:1:com.zhuge.analysis.metrics.Tweaks$TweakValue updateValue(java.lang.Object):120:120 -> a
+    2:14:java.lang.Boolean getBooleanValue():164:176 -> a
+    1:13:java.lang.Number getNumberValue():142:154 -> b
+    1:7:java.lang.String getStringValue():127:133 -> c
+com.zhuge.analysis.stat.CachedBitmap -> com.zhuge.analysis.stat.a:
+    android.graphics.Bitmap mCached -> a
+    android.graphics.Paint masaicPaint -> c
+    android.graphics.Paint mPaint -> b
+    float scale -> d
+    1:1:void <init>():39:39 -> <init>
+    2:9:void <init>():37:44 -> <init>
+    1:14:void recreate(int,int,int,android.graphics.Bitmap):56:69 -> a
+    15:25:java.lang.String getBase64StringFromView(android.view.View,boolean,org.json.JSONArray,int):83:93 -> a
+    26:39:void tackScreenshot(android.view.View):110:123 -> a
+    40:40:void tackScreenshot(android.view.View):121:121 -> a
+    41:41:void tackScreenshot(android.view.View):119:119 -> a
+    42:42:void tackScreenshot(android.view.View):117:117 -> a
+    43:83:void tackScreenshot(android.view.View):115:155 -> a
+    84:100:void drawMosaicInCache(org.json.JSONArray,int):160:176 -> a
+com.zhuge.analysis.stat.CodeLessConfig -> com.zhuge.analysis.stat.b:
+    android.content.Context mContext -> a
+    java.lang.Object sInstanceLock -> b
+    boolean mDisableGestureBindingUI -> e
+    com.zhuge.analysis.stat.CodeLessConfig sInstance -> c
+    java.util.HashMap viewTag -> f
+    boolean DEBUG -> d
+    1:9:void <clinit>():21:29 -> <clinit>
+    1:2:void <init>(android.content.Context):36:37 -> <init>
+    1:1:void track(java.lang.String,org.json.JSONObject):33:33 -> a
+    2:9:com.zhuge.analysis.stat.CodeLessConfig getInstance(android.content.Context):49:56 -> a
+    10:25:java.util.Map getDeviceInfo():61:76 -> a
+    26:27:void debug(java.lang.String):96:97 -> a
+    1:1:boolean getDisableGestureBindingUI():86:86 -> b
+    java.lang.String getEditorUrl() -> c
+    java.lang.String getEventUrl() -> d
+    1:1:boolean isDEBUG():102:102 -> e
+    1:1:void openGestureBindingUI():91:91 -> f
+com.zhuge.analysis.stat.Constants -> com.zhuge.analysis.stat.c:
+    java.lang.String API_PATH_BACKUP -> g
+    java.lang.String API_PATH -> f
+    java.lang.String SP_TODAY_COUNT -> i
+    java.lang.String SP_LAST_SESSION_TIME -> h
+    java.lang.String SP_UPDATE_DEVICE_TIME -> k
+    java.lang.String SP_ENABLE_ZGSEE -> j
+    java.lang.String SP_CUID -> m
+    java.lang.String SP_DID -> l
+    long FLUSH_INTERVAL -> b
+    java.lang.String SP_SEE_COUNT -> o
+    java.lang.String SP_SESSION_COUNT -> n
+    int SEND_SIZE -> d
+    java.lang.String SP_LAST_PAGE -> p
+    java.lang.String SP_FIRST_SCREENSHOT_TIME -> s
+    int MAX_LOCAL_SIZE -> c
+    java.lang.String SP_MODIFY -> r
+    int UPLOAD_LIMIT_SIZE -> a
+    java.lang.String ZG_BASE_API -> e
+    int SESSION_EXCEED -> q
+    1:5:void configString(java.lang.StringBuilder):147:151 -> a
+    6:18:void loadConfig(android.content.Context):157:169 -> a
+com.zhuge.analysis.stat.CrashHandler -> com.zhuge.analysis.stat.d:
+    java.lang.Thread$UncaughtExceptionHandler mDefaultCrashHandler -> a
+    com.zhuge.analysis.stat.CrashHandler sInstance -> c
+    com.zhuge.analysis.stat.ZGCore mCore -> b
+    1:1:void <clinit>():12:12 -> <clinit>
+    1:1:void <init>():19:19 -> <init>
+    1:1:com.zhuge.analysis.stat.CrashHandler getInstance():23:23 -> a
+    2:6:void init(com.zhuge.analysis.stat.ZGCore):29:33 -> a
+    1:8:void uncaughtException(java.lang.Thread,java.lang.Throwable):42:49 -> uncaughtException
+com.zhuge.analysis.stat.ViewExposeServer -> com.zhuge.analysis.stat.e:
+    com.zhuge.analysis.stat.exp.utils.TimerToggle viewTreeChangeTimerToggle -> b
+    java.util.WeakHashMap mActivityScopes -> c
+    com.zhuge.analysis.stat.exp.ViewExposeAppState coreAppState -> a
+    1:4:void <init>(com.zhuge.analysis.stat.exp.ViewExposeAppState):38:41 -> <init>
+    1:7:void init():45:51 -> a
+    8:10:void stopViewExposeInternal(com.zhuge.analysis.stat.ViewExposeServer$ActivityScope,android.view.View):104:106 -> a
+    11:38:void newActivityArrived(android.app.Activity):143:170 -> a
+    39:40:void sentExposeEvent(com.zhuge.analysis.stat.ViewExposeServer$ExposeEvent):214:215 -> a
+    41:41:void sentExposeEvent(com.zhuge.analysis.stat.ViewExposeServer$ExposeEvent):214:214 -> a
+    42:79:void checkImp(java.util.WeakHashMap):219:256 -> a
+    80:81:boolean checkViewVisibility(com.zhuge.analysis.stat.exp.entities.ViewExposeData):264:265 -> a
+    1:25:void markViewExp(com.zhuge.analysis.stat.exp.entities.ViewExposeData):56:80 -> b
+    26:35:void markViewExp(com.zhuge.analysis.stat.exp.entities.ViewExposeData):79:88 -> b
+    36:38:void checkAndSendViewTreeChange(android.app.Activity):95:97 -> b
+    39:39:void onWindowFocusChanged():175:175 -> b
+    1:4:void layoutActivity(android.app.Activity):199:202 -> c
+    1:2:void onDraw():188:189 -> onDraw
+    1:3:void onGlobalLayout():180:182 -> onGlobalLayout
+com.zhuge.analysis.stat.ViewExposeServer$1 -> com.zhuge.analysis.stat.e$a:
+    com.zhuge.analysis.stat.ViewExposeServer this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.stat.ViewExposeServer):47:47 -> <init>
+    1:1:void run():49:49 -> run
+com.zhuge.analysis.stat.ViewExposeServer$2 -> com.zhuge.analysis.stat.e$b:
+    com.zhuge.analysis.stat.ViewExposeServer this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.stat.ViewExposeServer):163:163 -> <init>
+    1:1:void onWindowFocusChanged(boolean):166:166 -> onWindowFocusChanged
+com.zhuge.analysis.stat.ViewExposeServer$ActivityScope -> com.zhuge.analysis.stat.e$c:
+    boolean activityIsTrack -> b
+    com.zhuge.analysis.stat.ViewExposeServer$ToggleWithViewEvent toggleWithViewEvent -> a
+    1:1:void <init>(com.zhuge.analysis.stat.ViewExposeServer):291:291 -> <init>
+    2:5:void <init>(com.zhuge.analysis.stat.ViewExposeServer):289:292 -> <init>
+    1:1:boolean containView(android.view.View):296:296 -> a
+    2:2:void addViewExposeEvent(android.view.View,com.zhuge.analysis.stat.ViewExposeServer$ExposeEvent):304:304 -> a
+    1:1:com.zhuge.analysis.stat.ViewExposeServer$ExposeEvent getExposeEvent(android.view.View):300:300 -> b
+    1:1:void removeView(android.view.View):308:308 -> c
+com.zhuge.analysis.stat.ViewExposeServer$ExposeEvent -> com.zhuge.analysis.stat.e$d:
+    com.zhuge.analysis.stat.exp.entities.ViewExposeData expData -> a
+    boolean lastVisible -> b
+    1:1:void <init>():273:273 -> <init>
+    1:6:boolean equals(java.lang.Object):277:282 -> equals
+    7:7:boolean equals(java.lang.Object):281:281 -> equals
+com.zhuge.analysis.stat.ViewExposeServer$ToggleWithViewEvent -> com.zhuge.analysis.stat.e$e:
+    com.zhuge.analysis.stat.exp.utils.TimerToggle timerToggle -> a
+    com.zhuge.analysis.stat.ViewExposeServer exposeServer -> c
+    java.util.WeakHashMap viewToEvent -> b
+    1:5:void <init>(com.zhuge.analysis.stat.ViewExposeServer):317:321 -> <init>
+    1:1:boolean containView(android.view.View):325:325 -> a
+    2:2:void addViewExposeEvent(android.view.View,com.zhuge.analysis.stat.ViewExposeServer$ExposeEvent):333:333 -> a
+    3:3:void toggle():341:341 -> a
+    1:1:com.zhuge.analysis.stat.ViewExposeServer$ExposeEvent getExposeEvent(android.view.View):329:329 -> b
+    1:1:void removeView(android.view.View):337:337 -> c
+    1:1:void run():345:345 -> run
+com.zhuge.analysis.stat.ZADeviceId -> com.zhuge.analysis.stat.f:
+    1:36:java.lang.String generateDid(android.content.Context):26:61 -> a
+    1:1:java.lang.String getDeviceId(android.content.Context):17:17 -> b
+com.zhuge.analysis.stat.ZGAppInfo -> com.zhuge.analysis.stat.g:
+    java.lang.String myProcessName -> f
+    java.lang.String cuid -> j
+    android.telephony.TelephonyManager tm -> p
+    boolean isInMainThread -> u
+    javax.crypto.SecretKey key -> r
+    int mosaic -> G
+    int sessionSeeCount -> E
+    java.lang.String apiPathBack -> x
+    java.lang.String ZGSeePolicyUrl -> z
+    java.lang.String appKey -> a
+    java.lang.String appName -> c
+    android.content.SharedPreferences globalSP -> h
+    boolean userDefinedEnableZGSee -> A
+    long sessionID -> m
+    java.lang.String cr -> e
+    boolean localZGSeeState -> C
+    java.lang.String packageName -> g
+    com.zhuge.analysis.util.ConnectivityUtils connectivityUtils -> o
+    long firstScreenShotTime -> I
+    java.lang.String imei -> i
+    org.json.JSONObject deepPram -> q
+    java.lang.String RSAMd5 -> H
+    java.lang.String did -> k
+    int sessionEventCount -> F
+    int serverPolicy -> D
+    java.lang.String RSA_key -> s
+    boolean debug -> t
+    java.lang.String apiPath -> w
+    java.lang.String ZGSeeUrl -> y
+    org.json.JSONArray screenSize -> v
+    android.content.Context mContent -> l
+    long lastSessionActivityTime -> n
+    java.lang.String appChannel -> b
+    boolean enableZGSee -> B
+    java.lang.String appVersion -> d
+    1:1:void <init>():108:108 -> <init>
+    2:60:void <init>():47:105 -> <init>
+    1:5:void setUserDefinedEnableZGSee(boolean):179:183 -> a
+    6:6:void setMosaic(int):217:217 -> a
+    7:17:void initAppInfo(android.content.Context):233:243 -> a
+    18:53:void upgradeSharedPrefsFrom(android.content.Context,java.lang.String):291:326 -> a
+    54:93:org.json.JSONObject buildDeviceInfo(android.content.Context,boolean):402:441 -> a
+    94:112:org.json.JSONObject buildSessionStart(java.lang.String):476:494 -> a
+    113:136:org.json.JSONObject buildSeeStart():500:523 -> a
+    137:171:org.json.JSONObject buildCustomEvent(java.lang.String,org.json.JSONObject):562:596 -> a
+    172:190:org.json.JSONObject wrapDataWithArray(org.json.JSONArray):699:717 -> a
+    191:202:org.json.JSONObject channelData(java.lang.String,java.lang.String):723:734 -> a
+    203:241:org.json.JSONObject parseMid(int,com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.Object):743:781 -> a
+    242:244:org.json.JSONObject parseMid(int,com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.Object):771:773 -> a
+    245:247:org.json.JSONObject parseMid(int,com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.Object):766:768 -> a
+    248:255:org.json.JSONObject parseMid(int,com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.Object):755:762 -> a
+    256:299:org.json.JSONObject parseMid(int,com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.Object):745:788 -> a
+    300:304:org.json.JSONObject parseMid(int,com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.Object):786:790 -> a
+    305:316:org.json.JSONObject dealMid(java.lang.String,java.lang.String,int):794:805 -> a
+    317:333:org.json.JSONObject dealMid(java.lang.String,java.lang.String,int):802:818 -> a
+    334:363:org.json.JSONObject buildException(java.lang.Thread,java.lang.Throwable,boolean):825:854 -> a
+    364:378:void fillStackTrace(java.lang.StringBuilder,java.lang.Throwable):860:874 -> a
+    379:447:org.json.JSONObject buildScreenshot(com.zhuge.analysis.stat.ZGCore$ScreenshotInfo):883:951 -> a
+    448:466:org.json.JSONObject buildAutoTrackEvent(org.json.JSONObject):970:988 -> a
+    1:4:boolean setAppChannel(java.lang.String):120:123 -> b
+    5:9:void setServerPolicy(int):192:196 -> b
+    10:57:void initDeviceInfo(android.content.Context):331:378 -> b
+    58:83:org.json.JSONObject buildSessionEnd():529:554 -> b
+    84:99:org.json.JSONObject buildIdentify(java.lang.String,org.json.JSONObject):644:659 -> b
+    100:118:org.json.JSONObject buildDurTrackEvent(org.json.JSONObject):994:1012 -> b
+    1:4:boolean setAppKey(java.lang.String):112:115 -> c
+    5:45:org.json.JSONObject setDeepPram(org.json.JSONObject):133:173 -> c
+    46:64:void initGlobalSettingFile(android.content.Context):248:266 -> c
+    65:65:void initGlobalSettingFile(android.content.Context):264:264 -> c
+    66:86:org.json.JSONObject dataCommon():447:467 -> c
+    87:121:org.json.JSONObject buildRevenueEvent(java.lang.String,org.json.JSONObject):603:637 -> c
+    1:1:void setRSAMd5(java.lang.String):201:201 -> d
+    2:2:java.lang.String getAppKey():209:209 -> d
+    3:14:void upgradeSharedPrefs(android.content.Context):271:282 -> d
+    1:1:java.lang.String getDid():666:666 -> e
+    2:20:org.json.JSONObject wrapDataWithString(java.lang.String):675:693 -> e
+    1:1:android.content.SharedPreferences getGlobalSP():472:472 -> f
+    1:1:long getSessionID():670:670 -> g
+    1:1:boolean isZGSeeEnable():188:188 -> h
+    1:15:void logInitInfo():383:397 -> i
+    1:1:boolean needMosaic():213:213 -> j
+    1:3:boolean updateZGSeeState():962:964 -> k
+com.zhuge.analysis.stat.ZGAppInfo$1 -> com.zhuge.analysis.stat.g$a:
+    int[] $SwitchMap$com$zhuge$analysis$stat$ZhugeSDK$PushChannel -> a
+    1:1:void <clinit>():743:743 -> <clinit>
+com.zhuge.analysis.stat.ZGCore -> com.zhuge.analysis.stat.h:
+    android.content.Context mContext -> c
+    com.zhuge.analysis.stat.ZGAppInfo appInfo -> d
+    java.lang.String pageName -> i
+    com.zhuge.analysis.stat.ZGCore$ZGWorker zgWorker -> a
+    int permissionNet -> h
+    int foregroundActivities -> f
+    boolean real -> g
+    com.zhuge.analysis.stat.ZGCore$ZGHttpWorker zgHttpWorker -> b
+    java.util.Map mEventTimings -> e
+    1:1:void <init>(com.zhuge.analysis.stat.ZGAppInfo):45:45 -> <init>
+    2:20:void <init>(com.zhuge.analysis.stat.ZGAppInfo):35:53 -> <init>
+    1:1:android.content.Context access$000(com.zhuge.analysis.stat.ZGCore):29:29 -> a
+    2:2:int access$402(com.zhuge.analysis.stat.ZGCore,int):29:29 -> a
+    3:3:boolean access$502(com.zhuge.analysis.stat.ZGCore,boolean):29:29 -> a
+    4:16:void init(android.content.Context):61:73 -> a
+    17:19:void onEnterForeground(java.lang.String):80:82 -> a
+    20:23:void sendEventMessage(int,java.lang.String,org.json.JSONObject):99:102 -> a
+    24:26:void sendObjMessage(int,java.lang.Object):111:113 -> a
+    27:28:void flush():117:118 -> a
+    29:36:void sendScreenshot(com.zhuge.analysis.stat.ZGCore$ScreenshotInfo):129:136 -> a
+    37:40:void setScreenSize(int,int):140:143 -> a
+    41:43:void onException(java.lang.Thread,java.lang.Throwable):147:149 -> a
+    1:1:java.util.Map access$300(com.zhuge.analysis.stat.ZGCore):29:29 -> b
+    2:5:void onExitForeground(java.lang.String):86:89 -> b
+    1:1:int access$400(com.zhuge.analysis.stat.ZGCore):29:29 -> c
+    1:1:boolean access$500(com.zhuge.analysis.stat.ZGCore):29:29 -> d
+    1:1:com.zhuge.analysis.stat.ZGCore$ZGHttpWorker access$600(com.zhuge.analysis.stat.ZGCore):29:29 -> e
+    1:1:com.zhuge.analysis.stat.ZGCore$ZGWorker access$700(com.zhuge.analysis.stat.ZGCore):29:29 -> f
+com.zhuge.analysis.stat.ZGCore$EventDescription -> com.zhuge.analysis.stat.h$a:
+    org.json.JSONObject properties -> b
+    java.lang.String eventName -> a
+    1:3:void <init>(java.lang.String,org.json.JSONObject):153:155 -> <init>
+    1:1:java.lang.String access$100(com.zhuge.analysis.stat.ZGCore$EventDescription):152:152 -> a
+    1:1:org.json.JSONObject access$200(com.zhuge.analysis.stat.ZGCore$EventDescription):152:152 -> b
+com.zhuge.analysis.stat.ZGCore$ScreenshotInfo -> com.zhuge.analysis.stat.h$b:
+    java.lang.String pageUrl -> g
+    java.lang.String eid -> f
+    org.json.JSONArray mosaicViewArray -> i
+    long actionTime -> d
+    long pageStayTime -> c
+    java.lang.String pageName -> b
+    java.lang.String screenshot -> e
+    double gap -> h
+    org.json.JSONArray points -> a
+    1:1:void <init>():200:200 -> <init>
+    1:1:void setActionTime(long):216:216 -> a
+    2:2:void setEid(java.lang.String):225:225 -> a
+    3:3:void setGap(double):229:229 -> a
+    4:4:void setMosaicViewArray(org.json.JSONArray):235:235 -> a
+    1:1:void setPoints(org.json.JSONArray):204:204 -> b
+    2:2:void setPageName(java.lang.String):208:208 -> b
+    3:3:void setPageStayTime(long):212:212 -> b
+    1:1:void setPageUrl(java.lang.String):232:232 -> c
+    1:1:void setScreenshot(java.lang.String):221:221 -> d
+com.zhuge.analysis.stat.ZGCore$ZGHttpWorker -> com.zhuge.analysis.stat.h$c:
+    com.zhuge.analysis.util.HttpServices httpService -> a
+    com.zhuge.analysis.stat.ZGCore this$0 -> b
+    1:3:void <init>(com.zhuge.analysis.stat.ZGCore,android.os.Looper):736:738 -> <init>
+    1:31:void uploadSDKData(org.json.JSONObject,int,int):764:794 -> a
+    32:39:void uploadSDKData(org.json.JSONObject,int,int):789:796 -> a
+    40:56:void checkAppSee():802:818 -> a
+    57:77:void uploadZGSee(org.json.JSONObject,int):825:845 -> a
+    78:85:void uploadZGSee(org.json.JSONObject,int):842:849 -> a
+    1:14:void handleMessage(android.os.Message):743:756 -> handleMessage
+    15:16:void handleMessage(android.os.Message):750:751 -> handleMessage
+    17:18:void handleMessage(android.os.Message):745:746 -> handleMessage
+com.zhuge.analysis.stat.ZGCore$ZGWorker -> com.zhuge.analysis.stat.h$d:
+    long today_send_count -> f
+    long localEventSize -> e
+    com.zhuge.analysis.stat.ZGCore this$0 -> g
+    com.zhuge.analysis.util.HttpServices httpService -> b
+    boolean sdkProcessing -> c
+    com.zhuge.analysis.stat.ZhugeDbAdapter dbAdapter -> a
+    boolean appSeeProcessing -> d
+    1:2:void <init>(com.zhuge.analysis.stat.ZGCore,android.os.Looper):247:248 -> <init>
+    3:6:void <init>(com.zhuge.analysis.stat.ZGCore,android.os.Looper):243:246 -> <init>
+    1:17:void checkAppSeeLocal():453:469 -> a
+    18:21:boolean checkNetwork(boolean):473:476 -> a
+    22:42:int endTrack(com.zhuge.analysis.stat.ZGCore$EventDescription):522:542 -> a
+    43:68:int startNewSessionIfNeed(java.lang.String):548:573 -> a
+    69:81:int startNewSessionIfNeed(java.lang.String):566:578 -> a
+    82:94:int addEvent(org.json.JSONObject):622:634 -> a
+    1:17:void addScreenshot(org.json.JSONObject):488:504 -> b
+    18:31:void startSession(java.lang.String):589:602 -> b
+    32:35:void completeLastSession():606:609 -> b
+    1:1:void updateCUID(java.lang.String):515:515 -> c
+    2:23:void flushEvent():698:719 -> c
+    1:5:void updateSessionActivity(java.lang.String):613:617 -> d
+    6:59:int flushEventWithDeepShare():640:693 -> d
+    1:1:void updateDeviceInfoTime():509:509 -> e
+    1:3:void updateTodayCount():724:726 -> f
+    1:171:void handleMessage(android.os.Message):253:423 -> handleMessage
+    172:309:void handleMessage(android.os.Message):306:443 -> handleMessage
+    310:313:void handleMessage(android.os.Message):411:414 -> handleMessage
+    314:326:void handleMessage(android.os.Message):391:403 -> handleMessage
+    327:335:void handleMessage(android.os.Message):379:387 -> handleMessage
+    336:338:void handleMessage(android.os.Message):374:376 -> handleMessage
+    339:341:void handleMessage(android.os.Message):368:370 -> handleMessage
+    342:344:void handleMessage(android.os.Message):362:364 -> handleMessage
+    345:349:void handleMessage(android.os.Message):355:359 -> handleMessage
+    350:351:void handleMessage(android.os.Message):351:352 -> handleMessage
+    352:354:void handleMessage(android.os.Message):345:347 -> handleMessage
+    355:360:void handleMessage(android.os.Message):336:341 -> handleMessage
+    361:367:void handleMessage(android.os.Message):324:330 -> handleMessage
+    368:374:void handleMessage(android.os.Message):314:320 -> handleMessage
+    375:383:void handleMessage(android.os.Message):294:302 -> handleMessage
+    384:385:void handleMessage(android.os.Message):290:291 -> handleMessage
+    386:553:void handleMessage(android.os.Message):281:448 -> handleMessage
+com.zhuge.analysis.stat.ZhugeCallbacks -> com.zhuge.analysis.stat.i:
+    int currentSize -> n
+    long startTime -> i
+    float density -> j
+    boolean mosaicIsOk -> o
+    long lastDown -> k
+    org.json.JSONArray editableTextRects -> m
+    com.zhuge.analysis.stat.ZhugeCallbacks$newRecordTouchListener mListener -> f
+    java.util.WeakHashMap viewCollection -> h
+    boolean keyboardShow -> l
+    java.lang.String title -> q
+    java.lang.String url -> p
+    com.zhuge.analysis.stat.ZGCore mCore -> a
+    android.os.Handler mainHandler -> g
+    java.lang.reflect.Method getListenerInfo -> c
+    android.view.View rootView -> b
+    long start -> s
+    java.util.ArrayList urlList -> r
+    java.lang.String currentActivityUrl -> e
+    java.lang.String currentActivityName -> d
+    1:1:void <init>(com.zhuge.analysis.stat.ZGCore):74:74 -> <init>
+    2:28:void <init>(com.zhuge.analysis.stat.ZGCore):60:86 -> <init>
+    1:1:com.zhuge.analysis.stat.ZGCore access$100(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> a
+    2:2:long access$1002(com.zhuge.analysis.stat.ZhugeCallbacks,long):46:46 -> a
+    3:14:void addOnTouchListenerForView(android.view.View):253:264 -> a
+    15:23:void traverseRootView(android.view.ViewGroup):271:279 -> a
+    24:40:org.json.JSONArray cloneEditableLocation():357:373 -> a
+    void detectKeyboardShow() -> b
+    1:1:long access$1000(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> b
+    1:1:java.lang.String access$1100(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> c
+    1:1:java.lang.String access$1200(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> d
+    1:1:org.json.JSONArray access$1300(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> e
+    1:1:java.lang.String access$1400(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> f
+    1:1:java.lang.String access$1500(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> g
+    1:1:android.os.Handler access$200(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> h
+    1:28:boolean handleMessage(android.os.Message):288:315 -> handleMessage
+    1:1:boolean access$300(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> i
+    1:1:float access$400(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> j
+    1:1:boolean access$500(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> k
+    1:1:android.view.View access$600(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> l
+    1:1:org.json.JSONArray access$700(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> m
+    1:1:int access$800(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> n
+    1:1:long access$900(com.zhuge.analysis.stat.ZhugeCallbacks):46:46 -> o
+    1:24:void onActivityPaused(android.app.Activity):155:178 -> onActivityPaused
+    1:46:void onActivityResumed(android.app.Activity):103:148 -> onActivityResumed
+    1:1:void onActivityStopped(android.app.Activity):187:187 -> onActivityStopped
+    1:7:void onGlobalLayout():202:208 -> onGlobalLayout
+    8:8:void onGlobalLayout():203:203 -> onGlobalLayout
+com.zhuge.analysis.stat.ZhugeCallbacks$newRecordTouchListener -> com.zhuge.analysis.stat.i$a:
+    java.lang.ref.WeakReference weakCallback -> k
+    java.lang.String eid -> i
+    float lastY -> h
+    long dru -> e
+    float lastX -> g
+    org.json.JSONArray points -> b
+    int firstFingerID -> f
+    com.zhuge.analysis.stat.CachedBitmap mCachedBitmap -> j
+    long actionStart -> c
+    java.util.WeakHashMap viewAndListenerMap -> a
+    java.lang.String screenshot -> d
+    1:1:void <init>(com.zhuge.analysis.stat.ZhugeCallbacks):401:401 -> <init>
+    2:13:void <init>(com.zhuge.analysis.stat.ZhugeCallbacks):393:404 -> <init>
+    1:1:com.zhuge.analysis.stat.CachedBitmap access$000(com.zhuge.analysis.stat.ZhugeCallbacks$newRecordTouchListener):378:378 -> a
+    2:3:void setViewAndListenerMap(android.view.View,android.view.View$OnTouchListener):409:410 -> a
+    4:27:void onViewClick(android.view.View):542:565 -> a
+    1:114:boolean onTouch(android.view.View,android.view.MotionEvent):417:530 -> onTouch
+    115:228:boolean onTouch(android.view.View,android.view.MotionEvent):425:538 -> onTouch
+com.zhuge.analysis.stat.ZhugeDbAdapter -> com.zhuge.analysis.stat.j:
+    com.zhuge.analysis.stat.ZhugeDbAdapter$ZhugeDbHelper mDbHelper -> a
+    1:2:void <init>(android.content.Context):59:60 -> <init>
+    1:33:int addEventToSee(boolean,org.json.JSONObject,long):69:101 -> a
+    34:37:int addEventToSee(boolean,org.json.JSONObject,long):99:102 -> a
+    38:45:void deleteDataFromSeeWithSession(long):152:159 -> a
+    46:67:int addEvent(org.json.JSONObject):217:238 -> a
+    68:71:int addEvent(org.json.JSONObject):236:239 -> a
+    72:124:java.lang.String[] getDataAttachDeepShare(long,org.json.JSONObject):255:307 -> a
+    125:136:java.lang.String[] getDataAttachDeepShare(long,org.json.JSONObject):300:311 -> a
+    137:141:java.lang.String[] getDataAttachDeepShare(long,org.json.JSONObject):305:309 -> a
+    142:176:android.util.Pair getData():324:358 -> a
+    177:202:android.util.Pair getData():333:358 -> a
+    203:208:android.util.Pair getData():353:358 -> a
+    209:213:android.util.Pair getData():356:360 -> a
+    214:223:void removeEvent(java.lang.String):389:398 -> a
+    1:31:android.util.Pair getDataFromSee(long):115:145 -> b
+    32:36:android.util.Pair getDataFromSee(long):141:145 -> b
+    37:39:android.util.Pair getDataFromSee(long):144:146 -> b
+    40:49:void removeEventFromSee(java.lang.String):370:379 -> b
+    50:60:long getEventCount():405:415 -> b
+    61:64:long getEventCount():413:416 -> b
+    1:14:long getFirstSession():166:179 -> c
+    15:18:long getFirstSession():177:180 -> c
+    1:10:int getSessionCountFromSee():193:202 -> d
+    11:14:int getSessionCountFromSee():200:203 -> d
+com.zhuge.analysis.stat.ZhugeDbAdapter$ZhugeDbHelper -> com.zhuge.analysis.stat.j$a:
+    java.lang.String mFile -> a
+    1:2:void <init>(android.content.Context,java.lang.String):425:426 -> <init>
+    1:3:void deleteDatabase():462:464 -> a
+    1:5:void onCreate(android.database.sqlite.SQLiteDatabase):431:435 -> onCreate
+    1:7:void onDowngrade(android.database.sqlite.SQLiteDatabase,int,int):452:458 -> onDowngrade
+    1:7:void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int):440:446 -> onUpgrade
+com.zhuge.analysis.stat.ZhugeParam -> com.zhuge.analysis.stat.ZhugeParam:
+    1:1:void <init>(com.zhuge.analysis.stat.ZhugeParam$Builder,com.zhuge.analysis.stat.ZhugeParam$1):8:8 -> <init>
+    2:6:void <init>(com.zhuge.analysis.stat.ZhugeParam$Builder):14:18 -> <init>
+    1:1:java.lang.String toString():24:24 -> toString
+com.zhuge.analysis.stat.ZhugeParam$1 -> com.zhuge.analysis.stat.ZhugeParam$a:
+com.zhuge.analysis.stat.ZhugeParam$Builder -> com.zhuge.analysis.stat.ZhugeParam$Builder:
+    1:1:void <init>():32:32 -> <init>
+    2:5:void <init>():28:31 -> <init>
+    1:1:java.lang.String access$000(com.zhuge.analysis.stat.ZhugeParam$Builder):27:27 -> access$000
+    1:1:java.lang.String access$100(com.zhuge.analysis.stat.ZhugeParam$Builder):27:27 -> access$100
+    1:1:java.lang.String access$200(com.zhuge.analysis.stat.ZhugeParam$Builder):27:27 -> access$200
+    1:1:com.zhuge.analysis.listeners.ZhugeInAppDataListener access$300(com.zhuge.analysis.stat.ZhugeParam$Builder):27:27 -> access$300
+    1:1:com.zhuge.analysis.stat.ZhugeParam$Builder appChannel(java.lang.String):41:41 -> appChannel
+    1:1:com.zhuge.analysis.stat.ZhugeParam$Builder appKey(java.lang.String):36:36 -> appKey
+    1:1:com.zhuge.analysis.stat.ZhugeParam build():58:58 -> build
+    1:1:com.zhuge.analysis.stat.ZhugeParam$Builder did(java.lang.String):46:46 -> did
+    1:1:com.zhuge.analysis.stat.ZhugeParam$Builder inAppDataListener(com.zhuge.analysis.listeners.ZhugeInAppDataListener):51:51 -> inAppDataListener
+com.zhuge.analysis.stat.ZhugeSDK -> com.zhuge.analysis.stat.ZhugeSDK:
+    1:1:void <init>(com.zhuge.analysis.stat.ZhugeSDK$1):38:38 -> <init>
+    2:2:void <init>():108:108 -> <init>
+    3:72:void <init>():41:110 -> <init>
+    1:1:com.zhuge.analysis.stat.ZGCore access$200(com.zhuge.analysis.stat.ZhugeSDK):38:38 -> access$200
+    1:2:void autoTrackEvent(org.json.JSONObject):369:370 -> autoTrackEvent
+    1:1:void cacheDataEncode():136:136 -> cacheDataEncode
+    1:2:com.zhuge.analysis.viewSpider.TrackingDebug constructTrackingDebug():546:547 -> constructTrackingDebug
+    1:8:com.zhuge.analysis.viewSpider.UpdatesFromZhuge constructUpdatesFromZhuge(android.content.Context):553:560 -> constructUpdatesFromZhuge
+    1:1:void enabelDurationOnPage():172:172 -> enabelDurationOnPage
+    1:1:void enableExpTrack():179:179 -> enableExpTrack
+    1:1:void enableJavaScriptBridge():168:168 -> enableJavaScriptBridge
+    1:2:void endTrack(java.lang.String,org.json.JSONObject):364:365 -> endTrack
+    1:1:void flush(android.content.Context):480:480 -> flush
+    1:1:java.lang.String getDid():538:538 -> getDid
+    1:1:com.zhuge.analysis.stat.ZhugeSDK getInstance():105:105 -> getInstance
+    1:1:long getSid():542:542 -> getSid
+    1:6:void identify(android.content.Context,java.lang.String,org.json.JSONObject):467:472 -> identify
+    7:7:void identify(android.content.Context,java.lang.String,org.json.JSONObject):468:468 -> identify
+    8:8:void identify(android.content.Context,java.lang.String,java.util.HashMap):476:476 -> identify
+    1:39:void init(android.content.Context,java.lang.String,java.lang.String,com.zhuge.analysis.listeners.ZhugeInAppDataListener):306:344 -> init
+    40:40:void init(android.content.Context,java.lang.String,java.lang.String,com.zhuge.analysis.listeners.ZhugeInAppDataListener):313:313 -> init
+    1:1:void initDeepShare():184:184 -> initDeepShare
+    1:13:void initWithDeepShareAndParam(android.app.Activity,com.zhuge.analysis.stat.ZhugeParam):288:300 -> initWithDeepShareAndParam
+    1:27:void initWithParam(android.content.Context,com.zhuge.analysis.stat.ZhugeParam):256:282 -> initWithParam
+    1:1:boolean isEnableAutoTrack():147:147 -> isEnableAutoTrack
+    1:1:boolean isEnableCacheDataEnacode():139:139 -> isEnableCacheDataEnacode
+    1:1:boolean isEnableVisual():157:157 -> isEnableVisual
+    1:1:boolean isEnableVisualDebug():164:164 -> isEnableVisualDebug
+    1:1:boolean isInitDeepShare():187:187 -> isInitDeepShare
+    1:7:void onMsgReaded(com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.Object):497:503 -> onMsgReaded
+    1:7:void onMsgRecved(com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.Object):508:514 -> onMsgRecved
+    1:1:void openAutoTrack():144:144 -> openAutoTrack
+    1:1:void openDebug():128:128 -> openDebug
+    1:1:void openExceptionTrack():132:132 -> openExceptionTrack
+    1:1:void openLog():124:124 -> openLog
+    1:1:void openVisual():154:154 -> openVisual
+    1:1:void openVisualDebug():161:161 -> openVisualDebug
+    1:1:void setLogLevel(int):195:195 -> setLogLevel
+    1:1:void setMaxLocalSize(int):115:115 -> setMaxLocalSize
+    1:1:void setMaxSendSize(int):120:120 -> setMaxSendSize
+    1:6:void setPlatform(org.json.JSONObject):520:525 -> setPlatform
+    7:7:void setPlatform(org.json.JSONObject):521:521 -> setPlatform
+    1:6:void setSuperProperty(org.json.JSONObject):529:534 -> setSuperProperty
+    7:7:void setSuperProperty(org.json.JSONObject):530:530 -> setSuperProperty
+    1:9:void setThirdPartyPushUserId(com.zhuge.analysis.stat.ZhugeSDK$PushChannel,java.lang.String):485:493 -> setThirdPartyPushUserId
+    1:13:void setUploadURL(java.lang.String,java.lang.String):235:247 -> setUploadURL
+    14:14:void setUploadURL(java.lang.String,java.lang.String):237:237 -> setUploadURL
+    1:1:void setUtm(org.json.JSONObject):209:209 -> setUtm
+    1:1:void setZGSeeEnable(boolean):252:252 -> setZGSeeEnable
+    1:1:void setupCodelessGetEventsUrl(java.lang.String):226:226 -> setupCodelessGetEventsUrl
+    1:1:void setupCodelessUrl(java.lang.String):217:217 -> setupCodelessUrl
+    1:1:void startTrack(java.lang.String):355:355 -> startTrack
+    1:5:void track(android.content.Context,java.lang.String):409:413 -> track
+    6:6:void track(android.content.Context,java.lang.String):410:410 -> track
+    7:12:void track(android.content.Context,java.lang.String,org.json.JSONObject):417:422 -> track
+    13:13:void track(android.content.Context,java.lang.String,org.json.JSONObject):418:418 -> track
+    14:18:void track(android.content.Context,java.lang.String,java.util.HashMap):427:431 -> track
+    1:2:void trackDurationOnPage(org.json.JSONObject):374:375 -> trackDurationOnPage
+    1:5:void trackRevenue(android.content.Context,java.util.HashMap):381:385 -> trackRevenue
+    6:19:void trackRevenue(android.content.Context,org.json.JSONObject):392:405 -> trackRevenue
+    1:22:void viewExpTrack(com.zhuge.analysis.stat.exp.entities.ViewExposeData):441:462 -> viewExpTrack
+    1:2:void zgOnFailed(java.lang.String):89:90 -> zgOnFailed
+    1:5:void zgOnInAppDataReturned(org.json.JSONObject):96:100 -> zgOnInAppDataReturned
+com.zhuge.analysis.stat.ZhugeSDK$1 -> com.zhuge.analysis.stat.ZhugeSDK$a:
+com.zhuge.analysis.stat.ZhugeSDK$PushChannel -> com.zhuge.analysis.stat.ZhugeSDK$PushChannel:
+    1:1:void <clinit>():566:566 -> <clinit>
+    2:2:void <clinit>():565:565 -> <clinit>
+    1:2:void <init>(java.lang.String,int,java.lang.String):570:571 -> <init>
+    1:1:java.lang.String toString():576:576 -> toString
+    1:1:com.zhuge.analysis.stat.ZhugeSDK$PushChannel valueOf(java.lang.String):565:565 -> valueOf
+    1:1:com.zhuge.analysis.stat.ZhugeSDK$PushChannel[] values():565:565 -> values
+com.zhuge.analysis.stat.ZhugeSDK$SingletonHolder -> com.zhuge.analysis.stat.ZhugeSDK$b:
+    com.zhuge.analysis.stat.ZhugeSDK instance -> a
+    1:1:void <clinit>():84:84 -> <clinit>
+    1:1:com.zhuge.analysis.stat.ZhugeSDK access$100():83:83 -> a
+com.zhuge.analysis.stat.ZhugeSDK$ZhugeJS -> com.zhuge.analysis.stat.ZhugeSDK$ZhugeJS:
+    1:1:void <init>():581:581 -> <init>
+    1:8:void autoTrackProperty(java.lang.String,java.lang.String):609:616 -> autoTrackProperty
+    1:7:void identifyProperty(java.lang.String,java.lang.String):598:604 -> identifyProperty
+    1:8:void trackDurationOnPage(java.lang.String,java.lang.String):622:629 -> trackDurationOnPage
+    1:7:void trackProperty(java.lang.String,java.lang.String):586:592 -> trackProperty
+com.zhuge.analysis.stat.exp.ViewExposeAppState -> com.zhuge.analysis.stat.k.a:
+    com.zhuge.analysis.stat.exp.ViewExposeAppState$onNewActivityArrivedListener mListener -> c
+    java.lang.ref.WeakReference mForeGroundActivity -> b
+    java.lang.ref.WeakReference mResumedActivity -> a
+    1:1:void <init>():10:10 -> <init>
+    1:1:void setActivityArrivedListener(com.zhuge.analysis.stat.exp.ViewExposeAppState$onNewActivityArrivedListener):22:22 -> a
+    2:2:android.app.Activity getForegroundActivity():27:27 -> a
+    3:6:void setForegroundActivity(android.app.Activity):32:35 -> a
+    1:1:android.app.Activity getResumedActivity():40:40 -> b
+    2:5:void setResumedActivity(android.app.Activity):45:48 -> b
+    1:1:void onActivityCreated(android.app.Activity,android.os.Bundle):53:53 -> onActivityCreated
+    1:1:void onActivityPaused(android.app.Activity):72:72 -> onActivityPaused
+    1:4:void onActivityResumed(android.app.Activity):63:66 -> onActivityResumed
+com.zhuge.analysis.stat.exp.ViewExposeAppState$onNewActivityArrivedListener -> com.zhuge.analysis.stat.k.a$a:
+    void newActivityArrived(android.app.Activity) -> a
+com.zhuge.analysis.stat.exp.entities.ViewExposeData -> com.zhuge.analysis.stat.exp.entities.ViewExposeData:
+    1:3:void <init>(android.view.View,java.lang.String):24:26 -> <init>
+    1:1:java.lang.String getEventName():35:35 -> getEventName
+    1:1:org.json.JSONObject getProp():40:40 -> getProp
+    1:1:android.view.View getView():30:30 -> getView
+    1:1:void setProp(org.json.JSONObject):49:49 -> setProp
+com.zhuge.analysis.stat.exp.utils.ThreadUtil -> com.zhuge.analysis.stat.k.b.a:
+    1:1:boolean isRunningOnUiThread():49:49 -> a
+com.zhuge.analysis.stat.exp.utils.TimerToggle -> com.zhuge.analysis.stat.k.b.b:
+    java.lang.Runnable mAction -> b
+    long mMaxDelayTime -> e
+    android.os.Handler mHandler -> a
+    boolean mFirstTimeDelay -> f
+    long mDelayTime -> d
+    long mFirstToggleTime -> c
+    1:1:void <init>(java.lang.Runnable,com.zhuge.analysis.stat.exp.utils.TimerToggle$1):9:9 -> <init>
+    2:5:void <init>(java.lang.Runnable):17:20 -> <init>
+    1:1:long access$102(com.zhuge.analysis.stat.exp.utils.TimerToggle,long):9:9 -> a
+    2:2:boolean access$302(com.zhuge.analysis.stat.exp.utils.TimerToggle,boolean):9:9 -> a
+    3:4:void reset():51:52 -> a
+    1:1:long access$202(com.zhuge.analysis.stat.exp.utils.TimerToggle,long):9:9 -> b
+    2:4:void takeAction():45:47 -> b
+    1:16:void toggle():24:39 -> c
+    1:1:void run():56:56 -> run
+com.zhuge.analysis.stat.exp.utils.TimerToggle$1 -> com.zhuge.analysis.stat.k.b.b$a:
+com.zhuge.analysis.stat.exp.utils.TimerToggle$Builder -> com.zhuge.analysis.stat.k.b.b$b:
+    java.lang.Runnable action -> c
+    long maxDelayTime -> b
+    long delayTime -> a
+    boolean firstTimeDelay -> d
+    1:1:void <init>(java.lang.Runnable):65:65 -> <init>
+    2:8:void <init>(java.lang.Runnable):60:66 -> <init>
+    1:1:com.zhuge.analysis.stat.exp.utils.TimerToggle$Builder delayTime(long):70:70 -> a
+    2:2:com.zhuge.analysis.stat.exp.utils.TimerToggle$Builder firstTimeDelay(boolean):80:80 -> a
+    3:6:com.zhuge.analysis.stat.exp.utils.TimerToggle build():85:88 -> a
+    1:1:com.zhuge.analysis.stat.exp.utils.TimerToggle$Builder maxDelayTime(long):75:75 -> b
+com.zhuge.analysis.stat.exp.utils.ViewExposeUtil -> com.zhuge.analysis.stat.k.b.c:
+    1:14:android.app.Activity findActivity(android.content.Context):20:33 -> a
+    15:20:boolean isViewSelfInvisible(android.view.View):68:73 -> a
+    1:18:boolean viewVisibleInParents(android.view.View):45:62 -> b
+com.zhuge.analysis.util.ActivityServicesUtils -> com.zhuge.analysis.b.a:
+    android.app.ActivityManager activityManager -> a
+    1:2:void <init>(android.content.Context):18:19 -> <init>
+    1:14:java.lang.String getMyProcessName():28:41 -> a
+com.zhuge.analysis.util.AutoTrackUtils -> com.zhuge.analysis.b.b:
+    1:23:java.lang.String getActivityTitle(android.app.Activity):39:61 -> a
+    24:30:java.lang.Class compatActivity():109:115 -> a
+    31:32:java.lang.String getViewIdName(android.view.View):125:126 -> a
+    33:56:int getChildIndex(android.view.ViewParent,android.view.View):193:216 -> a
+    57:67:boolean hasClassName(java.lang.Object,java.lang.String):263:273 -> a
+    1:31:java.lang.String getToolbarTitle(android.app.Activity):72:102 -> b
+    32:54:java.lang.String getViewPath(android.view.View):237:259 -> b
+    1:52:java.lang.String getViewText(android.view.View):136:187 -> c
+com.zhuge.analysis.util.ConnectivityUtils -> com.zhuge.analysis.b.c:
+    android.net.ConnectivityManager connectivityManager -> a
+    1:2:void <init>(android.content.Context):14:15 -> <init>
+    1:10:int getNetworkType():24:33 -> a
+    1:5:boolean isOnline():40:44 -> b
+com.zhuge.analysis.util.DeviceInfoUtils -> com.zhuge.analysis.b.d:
+    1:1:java.lang.String getBrand():35:35 -> a
+    2:17:java.lang.String getResolution(android.content.Context):53:68 -> a
+    1:1:java.lang.String getDevice():42:42 -> b
+    2:16:float[] getScreenDensity(android.content.Context):72:86 -> b
+    1:1:java.lang.String getManfacturer():28:28 -> c
+    1:1:java.lang.String getOSVersion():21:21 -> d
+com.zhuge.analysis.util.HttpServices -> com.zhuge.analysis.b.e:
+    com.zhuge.analysis.util.HttpServices$NullHostNameVerifier mVerifier -> a
+    1:2:void <init>():38:39 -> <init>
+    1:22:javax.net.ssl.SSLSocketFactory getSSLFactory():45:66 -> a
+    23:77:byte[] sendRequest(java.lang.String,java.lang.String,byte[]):93:147 -> a
+    78:100:byte[] sendRequest(java.lang.String,java.lang.String,byte[]):125:147 -> a
+    101:122:byte[] sendRequest(java.lang.String,java.lang.String,byte[]):130:151 -> a
+    123:179:byte[] requestApi(java.lang.String,java.lang.String,java.util.Map):172:228 -> a
+    180:199:byte[] requestApi(java.lang.String,java.lang.String,java.util.Map):206:225 -> a
+    200:221:byte[] requestApi(java.lang.String,java.lang.String,java.util.Map):211:232 -> a
+    222:231:byte[] slurp(java.io.InputStream):240:249 -> a
+com.zhuge.analysis.util.HttpServices$1 -> com.zhuge.analysis.b.e$a:
+    1:1:void <init>(com.zhuge.analysis.util.HttpServices):47:47 -> <init>
+    1:1:java.security.cert.X509Certificate[] getAcceptedIssuers():60:60 -> getAcceptedIssuers
+com.zhuge.analysis.util.HttpServices$NullHostNameVerifier -> com.zhuge.analysis.b.e$b:
+    1:1:void <init>(com.zhuge.analysis.util.HttpServices):72:72 -> <init>
+com.zhuge.analysis.util.JSONUtils -> com.zhuge.analysis.b.f:
+    1:2:java.lang.String optionalStringKey(org.json.JSONObject,java.lang.String):22:23 -> a
+com.zhuge.analysis.util.Utils -> com.zhuge.analysis.b.g:
+    java.lang.String publicKey -> a
+    1:15:org.json.JSONObject cloneJSONObject(org.json.JSONObject):150:164 -> a
+    16:17:java.lang.String timeStamp2Date(long):170:171 -> a
+    18:36:java.lang.String parseUrl(java.lang.String,java.lang.String,java.lang.String):174:192 -> a
+    37:41:javax.crypto.SecretKey getAESKey():196:200 -> a
+    42:48:java.lang.String AESEncrypt(javax.crypto.SecretKey,byte[]):218:224 -> a
+    49:49:java.lang.String AESEncrypt(javax.crypto.SecretKey,byte[]):213:213 -> a
+    50:58:byte[] compress(byte[]):232:240 -> a
+    59:86:boolean checkHasPermission(android.content.Context,java.lang.String):306:333 -> a
+    87:87:boolean objectEquals(java.lang.Object,java.lang.Object):339:339 -> a
+    1:19:java.lang.String publicKeyEncodeRSA(byte[]):79:97 -> b
+    20:21:int getTimeZone():101:102 -> b
+    22:38:org.json.JSONObject conversionRevenuePropertiesKey(org.json.JSONObject):116:132 -> b
+com.zhuge.analysis.util.ZGLogger -> com.zhuge.analysis.b.h:
+    boolean logEnable -> a
+    int logLevel -> b
+    1:7:void setLogLevel(int):17:23 -> a
+    8:8:void openLog():27:27 -> a
+    9:9:void logError(java.lang.String,java.lang.String):31:31 -> a
+    10:13:void logVerbose(java.lang.String):60:63 -> a
+    14:14:void handleException(java.lang.String,java.lang.String,java.lang.Throwable):67:67 -> a
+    15:15:void printStackTrace(java.lang.Exception):75:75 -> a
+    1:21:void logMessage(java.lang.String,java.lang.String):35:55 -> b
+    22:34:void logMessage(java.lang.String,java.lang.String):40:52 -> b
+com.zhuge.analysis.util.ZhugeioUtils -> com.zhuge.analysis.b.i:
+    1:28:void <clinit>():46:73 -> <clinit>
+    1:3:java.lang.String getAndroidID(android.content.Context):231:233 -> a
+    4:31:boolean checkHasPermission(android.content.Context,java.lang.String):489:516 -> a
+    1:20:java.lang.String getIMEI(android.content.Context):250:269 -> b
+    1:16:java.lang.String getSerialNo(android.content.Context):118:133 -> c
+    1:7:boolean hasReadPhoneStatePermission(android.content.Context):337:343 -> d
+com.zhuge.analysis.util.ZhugeioUtils$1 -> com.zhuge.analysis.b.i$a:
+    1:23:void <init>():46:68 -> <init>
+com.zhuge.analysis.util.ZhugeioUtils$2 -> com.zhuge.analysis.b.i$b:
+    1:4:void <init>():73:76 -> <init>
+com.zhuge.analysis.viewSpider.Caller -> com.zhuge.analysis.c.a:
+    java.lang.Object[] mMethodArgs -> b
+    java.lang.String mMethodName -> a
+    java.lang.reflect.Method mTargetMethod -> e
+    java.lang.Class mTargetClass -> d
+    java.lang.Class mMethodResultType -> c
+    1:14:void <init>(java.lang.Class,java.lang.String,java.lang.Object[],java.lang.Class):11:24 -> <init>
+    15:15:void <init>(java.lang.Class,java.lang.String,java.lang.Object[],java.lang.Class):21:21 -> <init>
+    1:1:java.lang.Object[] getArgs():33:33 -> a
+    2:2:java.lang.Object applyMethod(android.view.View):37:37 -> a
+    3:12:java.lang.Object applyMethodWithArguments(android.view.View,java.lang.Object[]):41:50 -> a
+    13:13:java.lang.Object applyMethodWithArguments(android.view.View,java.lang.Object[]):48:48 -> a
+    14:14:java.lang.Object applyMethodWithArguments(android.view.View,java.lang.Object[]):46:46 -> a
+    15:35:boolean argsAreApplicable(java.lang.Object[]):58:78 -> a
+    36:51:java.lang.Class assignableArgType(java.lang.Class):94:109 -> a
+    1:24:java.lang.reflect.Method pickMethod(java.lang.Class):116:139 -> b
+    1:1:java.lang.String toString():29:29 -> toString
+com.zhuge.analysis.viewSpider.DynamicEventTracker -> com.zhuge.analysis.c.b:
+    java.lang.Runnable mTask -> c
+    java.util.Map mDebouncedEvents -> d
+    android.os.Handler mHandler -> b
+    com.zhuge.analysis.stat.CodeLessConfig mZhuge -> a
+    java.lang.String LOGTAG -> e
+    1:5:void <init>(com.zhuge.analysis.stat.CodeLessConfig,android.os.Handler):27:31 -> <init>
+    1:1:java.util.Map access$100(com.zhuge.analysis.viewSpider.DynamicEventTracker):25:25 -> a
+    2:28:void OnEvent(android.view.View,java.lang.String,boolean):37:63 -> a
+    29:55:java.lang.String textPropertyFromView(android.view.View):100:126 -> a
+    1:1:com.zhuge.analysis.stat.CodeLessConfig access$200(com.zhuge.analysis.viewSpider.DynamicEventTracker):25:25 -> b
+    1:1:android.os.Handler access$300(com.zhuge.analysis.viewSpider.DynamicEventTracker):25:25 -> c
+com.zhuge.analysis.viewSpider.DynamicEventTracker$1 -> com.zhuge.analysis.c.b$a:
+com.zhuge.analysis.viewSpider.DynamicEventTracker$SendDebouncedTask -> com.zhuge.analysis.c.b$b:
+    com.zhuge.analysis.viewSpider.DynamicEventTracker this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.viewSpider.DynamicEventTracker):70:70 -> <init>
+    2:2:void <init>(com.zhuge.analysis.viewSpider.DynamicEventTracker,com.zhuge.analysis.viewSpider.DynamicEventTracker$1):70:70 -> <init>
+    1:17:void run():73:89 -> run
+com.zhuge.analysis.viewSpider.DynamicEventTracker$Signature -> com.zhuge.analysis.c.b$c:
+    int mHashCode -> a
+    1:2:void <init>(android.view.View,java.lang.String):136:137 -> <init>
+    1:2:boolean equals(java.lang.Object):142:143 -> equals
+    1:1:int hashCode():151:151 -> hashCode
+com.zhuge.analysis.viewSpider.DynamicEventTracker$UnsentEvent -> com.zhuge.analysis.c.b$d:
+    org.json.JSONObject properties -> c
+    long timeSentMillis -> a
+    java.lang.String eventName -> b
+    1:4:void <init>(java.lang.String,org.json.JSONObject,long):158:161 -> <init>
+com.zhuge.analysis.viewSpider.EditProtocol -> com.zhuge.analysis.c.c:
+    java.lang.Class[] NO_PARAMS -> c
+    java.util.List NEVER_MATCH_PATH -> d
+    com.zhuge.analysis.viewSpider.ImageStore mImageStore -> b
+    com.zhuge.analysis.metrics.ResourceIds mResourceIds -> a
+    1:2:void <clinit>():432:433 -> <clinit>
+    1:3:void <init>(com.zhuge.analysis.metrics.ResourceIds,com.zhuge.analysis.viewSpider.ImageStore):66:68 -> <init>
+    1:30:com.zhuge.analysis.viewSpider.ViewVisitor readEventBinding(org.json.JSONObject,com.zhuge.analysis.viewSpider.ViewVisitor$OnEventListener):73:102 -> a
+    31:56:com.zhuge.analysis.viewSpider.ViewVisitor readEventBinding(org.json.JSONObject,com.zhuge.analysis.viewSpider.ViewVisitor$OnEventListener):80:105 -> a
+    57:96:com.zhuge.analysis.viewSpider.EditProtocol$Edit readEdit(org.json.JSONObject):111:150 -> a
+    97:97:com.zhuge.analysis.viewSpider.EditProtocol$Edit readEdit(org.json.JSONObject):147:147 -> a
+    98:98:com.zhuge.analysis.viewSpider.EditProtocol$Edit readEdit(org.json.JSONObject):132:132 -> a
+    99:151:com.zhuge.analysis.viewSpider.EditProtocol$Edit readEdit(org.json.JSONObject):125:177 -> a
+    152:169:com.zhuge.analysis.viewSpider.EditProtocol$Edit readEdit(org.json.JSONObject):172:189 -> a
+    170:170:com.zhuge.analysis.viewSpider.EditProtocol$Edit readEdit(org.json.JSONObject):181:181 -> a
+    171:239:com.zhuge.analysis.viewSpider.EditProtocol$Edit readEdit(org.json.JSONObject):118:186 -> a
+    240:240:com.zhuge.analysis.viewSpider.EditProtocol$Edit readEdit(org.json.JSONObject):184:184 -> a
+    241:273:java.util.List readPath(org.json.JSONArray,com.zhuge.analysis.metrics.ResourceIds):248:280 -> a
+    274:275:java.util.List readPath(org.json.JSONArray,com.zhuge.analysis.metrics.ResourceIds):267:268 -> a
+    276:299:java.lang.Integer reconcileIds(int,java.lang.String,com.zhuge.analysis.metrics.ResourceIds):298:321 -> a
+    300:325:com.zhuge.analysis.viewSpider.PropertyDescription readPropertyDescription(java.lang.Class,org.json.JSONObject):327:352 -> a
+    326:326:com.zhuge.analysis.viewSpider.PropertyDescription readPropertyDescription(java.lang.Class,org.json.JSONObject):350:350 -> a
+    327:327:com.zhuge.analysis.viewSpider.PropertyDescription readPropertyDescription(java.lang.Class,org.json.JSONObject):348:348 -> a
+    328:345:java.lang.Object convertArgument(java.lang.Object,java.lang.String,java.util.List):360:377 -> a
+    346:346:java.lang.Object convertArgument(java.lang.Object,java.lang.String,java.util.List):367:367 -> a
+    347:362:java.lang.Object convertArgument(java.lang.Object,java.lang.String,java.util.List):365:380 -> a
+    363:396:android.graphics.drawable.Drawable readBitmapDrawable(org.json.JSONObject,java.util.List):387:420 -> a
+    397:397:android.graphics.drawable.Drawable readBitmapDrawable(org.json.JSONObject,java.util.List):415:415 -> a
+    398:435:android.graphics.drawable.Drawable readBitmapDrawable(org.json.JSONObject,java.util.List):388:425 -> a
+    1:22:com.zhuge.analysis.viewSpider.ViewSnapshot readSnapshotConfig(org.json.JSONObject):193:214 -> b
+    23:23:com.zhuge.analysis.viewSpider.ViewSnapshot readSnapshotConfig(org.json.JSONObject):212:212 -> b
+    1:21:android.util.Pair readTweak(org.json.JSONObject):220:240 -> c
+    22:27:android.util.Pair readTweak(org.json.JSONObject):237:242 -> c
+com.zhuge.analysis.viewSpider.EditProtocol$1 -> com.zhuge.analysis.c.c$a:
+com.zhuge.analysis.viewSpider.EditProtocol$BadInstructionsException -> com.zhuge.analysis.c.c$b:
+    1:1:void <init>(java.lang.String):30:30 -> <init>
+    2:2:void <init>(java.lang.String,java.lang.Throwable):34:34 -> <init>
+com.zhuge.analysis.viewSpider.EditProtocol$CantGetEditAssetsException -> com.zhuge.analysis.c.c$c:
+    1:1:void <init>(java.lang.String,java.lang.Throwable):52:52 -> <init>
+com.zhuge.analysis.viewSpider.EditProtocol$Edit -> com.zhuge.analysis.c.c$d:
+    java.util.List imageUrls -> b
+    com.zhuge.analysis.viewSpider.ViewVisitor visitor -> a
+    1:1:void <init>(com.zhuge.analysis.viewSpider.ViewVisitor,java.util.List,com.zhuge.analysis.viewSpider.EditProtocol$1):56:56 -> <init>
+    2:4:void <init>(com.zhuge.analysis.viewSpider.ViewVisitor,java.util.List):57:59 -> <init>
+com.zhuge.analysis.viewSpider.EditProtocol$InapplicableInstructionsException -> com.zhuge.analysis.c.c$e:
+    1:1:void <init>(java.lang.String):42:42 -> <init>
+com.zhuge.analysis.viewSpider.EditState -> com.zhuge.analysis.c.d:
+    java.util.Map mIntendedEdits -> c
+    android.os.Handler mUiThreadHandler -> b
+    java.util.Set mCurrentEdits -> d
+    1:4:void <init>():28:31 -> <init>
+    1:1:void access$000(com.zhuge.analysis.viewSpider.EditState):26:26 -> a
+    2:2:java.util.Set getAll():26:26 -> a
+    3:4:void add(android.app.Activity):39:40 -> a
+    5:17:void setEdits(java.util.Map):69:81 -> a
+    18:18:void setEdits(java.util.Map):79:79 -> a
+    19:19:void setEdits(java.util.Map):74:74 -> a
+    20:27:void applyChangesFromList(android.view.View,java.util.List):122:129 -> a
+    1:1:boolean isEmpty():26:26 -> b
+    2:2:void remove(android.app.Activity):48:48 -> b
+    1:4:void applyEditsOnUiThread():85:88 -> c
+    1:17:void applyIntendedEdits():99:115 -> d
+    18:18:void applyIntendedEdits():108:108 -> d
+com.zhuge.analysis.viewSpider.EditState$1 -> com.zhuge.analysis.c.d$a:
+    com.zhuge.analysis.viewSpider.EditState this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.viewSpider.EditState):88:88 -> <init>
+    1:1:void run():91:91 -> run
+com.zhuge.analysis.viewSpider.EditState$EditBinding -> com.zhuge.analysis.c.d$b:
+    android.os.Handler mHandler -> e
+    java.lang.ref.WeakReference mViewRoot -> c
+    boolean mDying -> a
+    boolean mAlive -> b
+    com.zhuge.analysis.viewSpider.ViewVisitor mEdit -> d
+    1:12:void <init>(android.view.View,com.zhuge.analysis.viewSpider.ViewVisitor,android.os.Handler):134:145 -> <init>
+    1:11:void cleanUp():176:186 -> a
+    1:2:void kill():170:171 -> b
+    1:1:void onGlobalLayout():150:150 -> onGlobalLayout
+    1:12:void run():155:166 -> run
+    13:14:void run():161:162 -> run
+com.zhuge.analysis.viewSpider.EditorConnection -> com.zhuge.analysis.c.e:
+    java.net.URI mURI -> c
+    com.zhuge.analysis.viewSpider.EditorConnection$EditorClient mClient -> b
+    java.nio.ByteBuffer EMPTY_BYTE_BUFFER -> d
+    com.zhuge.analysis.viewSpider.EditorConnection$Editor mService -> a
+    1:1:void <clinit>():182:182 -> <clinit>
+    1:8:void <init>(java.net.URI,com.zhuge.analysis.viewSpider.EditorConnection$Editor,java.net.Socket):57:64 -> <init>
+    1:1:com.zhuge.analysis.viewSpider.EditorConnection$Editor access$100(com.zhuge.analysis.viewSpider.EditorConnection):28:28 -> a
+    2:2:java.nio.ByteBuffer access$400():28:28 -> a
+    1:1:java.net.URI access$200(com.zhuge.analysis.viewSpider.EditorConnection):28:28 -> b
+    2:2:java.io.BufferedOutputStream getBufferedOutputStream():73:73 -> b
+    1:1:com.zhuge.analysis.viewSpider.EditorConnection$EditorClient access$300(com.zhuge.analysis.viewSpider.EditorConnection):28:28 -> c
+    2:2:boolean isValid():69:69 -> c
+com.zhuge.analysis.viewSpider.EditorConnection$1 -> com.zhuge.analysis.c.e$a:
+com.zhuge.analysis.viewSpider.EditorConnection$Editor -> com.zhuge.analysis.c.e$b:
+    void bindEvents(org.json.JSONObject) -> a
+    void sendDeviceInfo() -> a
+    void cleanup() -> b
+    void clearEdits(org.json.JSONObject) -> b
+    void performEdit(org.json.JSONObject) -> c
+    void setTweaks(org.json.JSONObject) -> d
+    void sendSnapshot(org.json.JSONObject) -> e
+com.zhuge.analysis.viewSpider.EditorConnection$EditorClient -> com.zhuge.analysis.c.e$c:
+    com.zhuge.analysis.viewSpider.EditorConnection this$0 -> m
+    1:3:void <init>(com.zhuge.analysis.viewSpider.EditorConnection,java.net.URI,int,java.net.Socket):77:79 -> <init>
+    1:2:void onOpen(com.zhuge.analysis.java_websocket.handshake.ServerHandshake):84:85 -> a
+    3:25:void onMessage(java.lang.String):92:114 -> a
+    26:29:void onClose(int,java.lang.String,boolean):120:123 -> a
+    30:34:void onError(java.lang.Exception):128:132 -> a
+com.zhuge.analysis.viewSpider.EditorConnection$EditorConnectionException -> com.zhuge.analysis.c.e$d:
+    1:1:void <init>(com.zhuge.analysis.viewSpider.EditorConnection,java.lang.Throwable):34:34 -> <init>
+com.zhuge.analysis.viewSpider.EditorConnection$WebSocketOutputStream -> com.zhuge.analysis.c.e$e:
+    com.zhuge.analysis.viewSpider.EditorConnection this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.viewSpider.EditorConnection):137:137 -> <init>
+    2:2:void <init>(com.zhuge.analysis.viewSpider.EditorConnection,com.zhuge.analysis.viewSpider.EditorConnection$1):137:137 -> <init>
+    1:5:void close():168:172 -> close
+    6:6:void close():170:170 -> close
+    1:3:void write(int):142:144 -> write
+    4:4:void write(byte[]):150:150 -> write
+    5:9:void write(byte[],int,int):156:160 -> write
+com.zhuge.analysis.viewSpider.ImageStore -> com.zhuge.analysis.c.f:
+    java.io.File mDirectory -> a
+    java.security.MessageDigest mDigest -> c
+    com.zhuge.analysis.util.HttpServices mPoster -> b
+    1:1:void <init>(android.content.Context):37:37 -> <init>
+    2:14:void <init>(android.content.Context,java.lang.String,com.zhuge.analysis.util.HttpServices):40:52 -> <init>
+    1:3:void deleteStorage(java.lang.String):112:114 -> a
+    1:23:android.graphics.Bitmap getImage(java.lang.String):56:78 -> b
+    24:24:android.graphics.Bitmap getImage(java.lang.String):72:72 -> b
+    25:47:android.graphics.Bitmap getImage(java.lang.String):70:92 -> b
+    1:7:java.io.File storedFile(java.lang.String):119:125 -> c
+com.zhuge.analysis.viewSpider.ImageStore$CantGetImageException -> com.zhuge.analysis.c.f$a:
+    1:1:void <init>(java.lang.String):28:28 -> <init>
+    2:2:void <init>(java.lang.String,java.lang.Throwable):32:32 -> <init>
+com.zhuge.analysis.viewSpider.Pathfinder -> com.zhuge.analysis.c.g:
+    com.zhuge.analysis.viewSpider.Pathfinder$IntStack mIndexStack -> a
+    1:2:void <init>():108:109 -> <init>
+    1:34:void findTargetsInMatchedView(android.view.View,java.util.List,com.zhuge.analysis.viewSpider.Pathfinder$Accumulator):138:171 -> a
+    35:48:android.view.View findPrefixedMatch(com.zhuge.analysis.viewSpider.Pathfinder$PathElement,android.view.View,int):177:190 -> a
+    49:66:boolean matches(com.zhuge.analysis.viewSpider.Pathfinder$PathElement,android.view.View):201:218 -> a
+    67:77:boolean hasClassName(java.lang.Object,java.lang.String):227:237 -> a
+    1:18:void findTargetsInRoot(android.view.View,java.util.List,com.zhuge.analysis.viewSpider.Pathfinder$Accumulator):113:130 -> b
+com.zhuge.analysis.viewSpider.Pathfinder$Accumulator -> com.zhuge.analysis.c.g$a:
+    void accumulate(android.view.View) -> a
+com.zhuge.analysis.viewSpider.Pathfinder$IntStack -> com.zhuge.analysis.c.g$b:
+    int[] mStack -> a
+    int mStackSize -> b
+    1:3:void <init>():245:247 -> <init>
+    1:3:int alloc():258:260 -> a
+    4:4:void increment(int):272:272 -> a
+    1:1:int read(int):268:268 -> b
+    2:4:void free():280:282 -> b
+    1:1:boolean full():251:251 -> c
+com.zhuge.analysis.viewSpider.Pathfinder$PathElement -> com.zhuge.analysis.c.g$c:
+    java.lang.String tag -> f
+    int viewId -> d
+    java.lang.String viewClassName -> b
+    int index -> c
+    java.lang.String contentDescription -> e
+    int prefix -> a
+    1:7:void <init>(int,java.lang.String,int,int,java.lang.String,java.lang.String):56:62 -> <init>
+    1:22:java.lang.String toString():68:89 -> toString
+com.zhuge.analysis.viewSpider.PropertyDescription -> com.zhuge.analysis.c.h:
+    com.zhuge.analysis.viewSpider.Caller accessor -> c
+    java.lang.String name -> a
+    java.lang.Class targetClass -> b
+    java.lang.String mMutatorName -> d
+    1:6:void <init>(java.lang.String,java.lang.Class,com.zhuge.analysis.viewSpider.Caller,java.lang.String):4:9 -> <init>
+    1:5:com.zhuge.analysis.viewSpider.Caller makeMutator(java.lang.Object[]):14:18 -> a
+    1:1:java.lang.String toString():23:23 -> toString
+com.zhuge.analysis.viewSpider.ShakeGesture -> com.zhuge.analysis.c.i:
+    float[] z -> k
+    int count -> l
+    float[] x -> i
+    float[] y -> j
+    android.hardware.SensorManager sensorManager -> a
+    android.hardware.Sensor sensor -> b
+    float var_z -> f
+    float var_y -> e
+    float var_x -> d
+    int state -> g
+    long oldTime -> c
+    com.zhuge.analysis.viewSpider.ShakeGesture$OnShakeGestureListener mListener -> h
+    float old_z -> o
+    float old_y -> n
+    int trigger -> p
+    float old_x -> m
+    1:3:void <clinit>():19:21 -> <clinit>
+    1:1:void <init>(com.zhuge.analysis.viewSpider.ShakeGesture$OnShakeGestureListener):48:48 -> <init>
+    2:24:void <init>(com.zhuge.analysis.viewSpider.ShakeGesture$OnShakeGestureListener):27:49 -> <init>
+    1:3:void register(android.content.Context):54:56 -> a
+    4:19:void calculate_var():72:87 -> a
+    1:2:void unRegister():61:62 -> b
+    1:49:void onSensorChanged(android.hardware.SensorEvent):92:140 -> onSensorChanged
+    50:50:void onSensorChanged(android.hardware.SensorEvent):127:127 -> onSensorChanged
+    51:52:void onSensorChanged(android.hardware.SensorEvent):121:122 -> onSensorChanged
+com.zhuge.analysis.viewSpider.ShakeGesture$OnShakeGestureListener -> com.zhuge.analysis.c.i$a:
+    void onShakeGesture() -> a
+com.zhuge.analysis.viewSpider.TrackingDebug -> com.zhuge.analysis.c.j:
+com.zhuge.analysis.viewSpider.UIThreadSet -> com.zhuge.analysis.c.k:
+    java.util.Set mSet -> a
+    1:2:void <init>():13:14 -> <init>
+    1:4:void add(java.lang.Object):22:25 -> a
+    5:5:void add(java.lang.Object):23:23 -> a
+    6:9:java.util.Set getAll():36:39 -> a
+    10:10:java.util.Set getAll():37:37 -> a
+    1:4:void remove(java.lang.Object):29:32 -> b
+    5:5:void remove(java.lang.Object):30:30 -> b
+    6:9:boolean isEmpty():43:46 -> b
+    10:10:boolean isEmpty():44:44 -> b
+com.zhuge.analysis.viewSpider.UpdatesFromZhuge -> com.zhuge.analysis.c.l:
+    void startUpdates() -> a
+com.zhuge.analysis.viewSpider.ViewCrawler -> com.zhuge.analysis.c.m:
+    float mScaledDensity -> j
+    java.lang.String mAppKey -> k
+    com.zhuge.analysis.metrics.Tweaks mTweaks -> g
+    com.zhuge.analysis.viewSpider.DynamicEventTracker mDynamicEventTracker -> e
+    java.lang.String mAppVersion -> l
+    com.zhuge.analysis.viewSpider.EditState mEditState -> f
+    boolean inConnect -> a
+    boolean inSnapShot -> b
+    com.zhuge.analysis.stat.CodeLessConfig mConfig -> d
+    com.zhuge.analysis.viewSpider.ViewCrawler$ViewCrawlerHandler mMessageThreadHandler -> i
+    boolean alive -> c
+    java.util.Map mDeviceInfo -> h
+    1:965:void <init>(android.content.Context,java.lang.String,java.lang.String,com.zhuge.analysis.metrics.Tweaks):58:1022 -> <init>
+    966:985:void <init>(android.content.Context,java.lang.String,java.lang.String,com.zhuge.analysis.metrics.Tweaks):59:78 -> <init>
+    1:1:com.zhuge.analysis.viewSpider.ViewCrawler$ViewCrawlerHandler access$000(com.zhuge.analysis.viewSpider.ViewCrawler):55:55 -> a
+    2:2:boolean access$302(com.zhuge.analysis.viewSpider.ViewCrawler,boolean):55:55 -> a
+    3:8:void startUpdates():90:95 -> a
+    9:11:void setEventBindings(org.json.JSONArray):112:114 -> a
+    12:34:boolean updateEvent(java.lang.String):165:187 -> a
+    1:1:com.zhuge.analysis.viewSpider.DynamicEventTracker access$1000(com.zhuge.analysis.viewSpider.ViewCrawler):55:55 -> b
+    2:2:boolean access$902(com.zhuge.analysis.viewSpider.ViewCrawler,boolean):55:55 -> b
+    3:9:boolean updateEventFromZhuge():138:144 -> b
+    10:27:boolean updateEventFromZhuge():142:159 -> b
+    1:1:com.zhuge.analysis.viewSpider.EditState access$200(com.zhuge.analysis.viewSpider.ViewCrawler):55:55 -> c
+    1:1:java.lang.String access$400(com.zhuge.analysis.viewSpider.ViewCrawler):55:55 -> d
+    1:1:float access$600(com.zhuge.analysis.viewSpider.ViewCrawler):55:55 -> e
+    1:1:java.util.Map access$700(com.zhuge.analysis.viewSpider.ViewCrawler):55:55 -> f
+    1:1:com.zhuge.analysis.metrics.Tweaks access$800(com.zhuge.analysis.viewSpider.ViewCrawler):55:55 -> g
+    1:1:boolean access$900(com.zhuge.analysis.viewSpider.ViewCrawler):55:55 -> h
+com.zhuge.analysis.viewSpider.ViewCrawler$1 -> com.zhuge.analysis.c.m$a:
+    1:1:void <init>(com.zhuge.analysis.viewSpider.ViewCrawler):78:78 -> <init>
+com.zhuge.analysis.viewSpider.ViewCrawler$2 -> com.zhuge.analysis.c.m$b:
+    com.zhuge.analysis.viewSpider.ViewCrawler this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.viewSpider.ViewCrawler):95:95 -> <init>
+    1:2:void run():98:99 -> run
+com.zhuge.analysis.viewSpider.ViewCrawler$Editor -> com.zhuge.analysis.c.m$c:
+    com.zhuge.analysis.viewSpider.ViewCrawler this$0 -> a
+    1:1:void <init>(com.zhuge.analysis.viewSpider.ViewCrawler):943:943 -> <init>
+    2:2:void <init>(com.zhuge.analysis.viewSpider.ViewCrawler,com.zhuge.analysis.viewSpider.ViewCrawler$1):943:943 -> <init>
+    1:3:void bindEvents(org.json.JSONObject):978:980 -> a
+    4:5:void sendDeviceInfo():985:986 -> a
+    1:3:void clearEdits(org.json.JSONObject):964:966 -> b
+    4:5:void cleanup():991:992 -> b
+    1:3:void performEdit(org.json.JSONObject):957:959 -> c
+    1:3:void setTweaks(org.json.JSONObject):971:973 -> d
+    1:6:void sendSnapshot(org.json.JSONObject):947:952 -> e
+com.zhuge.analysis.viewSpider.ViewCrawler$LifecycleCallbacks -> com.zhuge.analysis.c.m$d:
+    com.zhuge.analysis.viewSpider.ShakeGesture mShakeGesture -> a
+    com.zhuge.analysis.viewSpider.ViewCrawler this$0 -> b
+    1:2:void <init>(com.zhuge.analysis.viewSpider.ViewCrawler):195:196 -> <init>
+    1:2:void onShakeGesture():201:202 -> a
+    3:4:void installConnectionSensor(android.app.Activity):241:242 -> a
+    1:2:void uninstallConnectionSensor(android.app.Activity):248:249 -> b
+    1:3:void onActivityPaused(android.app.Activity):221:223 -> onActivityPaused
+    1:2:void onActivityResumed(android.app.Activity):215:216 -> onActivityResumed
+com.zhuge.analysis.viewSpider.ViewCrawler$VariantChange -> com.zhuge.analysis.c.m$e:
+    org.json.JSONObject change -> b
+    java.lang.String activityName -> a
+    android.util.Pair variantId -> c
+    1:4:void <init>(java.lang.String,org.json.JSONObject,android.util.Pair):997:1000 -> <init>
+com.zhuge.analysis.viewSpider.ViewCrawler$VariantTweak -> com.zhuge.analysis.c.m$f:
+    org.json.JSONObject tweak -> a
+    android.util.Pair variantId -> b
+    1:3:void <init>(org.json.JSONObject,android.util.Pair):1009:1011 -> <init>
+com.zhuge.analysis.viewSpider.ViewCrawler$ViewCrawlerHandler -> com.zhuge.analysis.c.m$g:
+    android.content.Context mContext -> c
+    com.zhuge.analysis.viewSpider.EditorConnection mEditorConnection -> a
+    com.zhuge.analysis.viewSpider.EditProtocol mProtocol -> e
+    java.util.List mEditorEventBindings -> j
+    com.zhuge.analysis.viewSpider.ViewCrawler this$0 -> o
+    java.util.List mEditorAssetUrls -> i
+    java.util.List mEditorTweaks -> h
+    com.zhuge.analysis.viewSpider.ViewSnapshot mSnapshot -> b
+    java.util.List mPersistentEventBindings -> m
+    java.util.concurrent.locks.Lock mStartLock -> d
+    com.zhuge.analysis.viewSpider.ImageStore mImageStore -> f
+    java.util.Map mEditorChanges -> g
+    java.util.List mPersistentTweaks -> l
+    java.util.List mPersistentChanges -> k
+    java.util.Set mSeenExperiments -> n
+    1:21:void <init>(com.zhuge.analysis.viewSpider.ViewCrawler,android.content.Context,android.os.Looper):258:278 -> <init>
+    1:1:android.content.SharedPreferences access$100(com.zhuge.analysis.viewSpider.ViewCrawler$ViewCrawlerHandler):256:256 -> a
+    2:22:void sendError(java.lang.String):475:495 -> a
+    23:28:void sendError(java.lang.String):492:497 -> a
+    29:33:void sendError(java.lang.String):495:499 -> a
+    34:46:void handleEditorBindingsCleared(org.json.JSONObject):671:683 -> a
+    47:51:void handleEventBindingsReceived(org.json.JSONArray):719:723 -> a
+    52:70:void applyVariantsAndEventBindings():785:803 -> a
+    71:71:void applyVariantsAndEventBindings():801:801 -> a
+    72:108:void applyVariantsAndEventBindings():799:835 -> a
+    109:109:void applyVariantsAndEventBindings():833:833 -> a
+    110:143:void applyVariantsAndEventBindings():831:864 -> a
+    144:161:void applyVariantsAndEventBindings():862:879 -> a
+    162:197:void applyVariantsAndEventBindings():877:912 -> a
+    198:198:void updateEventTime(long):918:918 -> a
+    1:16:void connectToEditor():433:448 -> b
+    17:38:void connectToEditor():446:467 -> b
+    39:39:void connectToEditor():465:465 -> b
+    40:59:void sendReportTrackToEditor(java.lang.String):621:640 -> b
+    60:67:void sendReportTrackToEditor(java.lang.String):635:642 -> b
+    68:73:void handleVariantsReceived(org.json.JSONArray):707:712 -> b
+    74:92:void handleEditorBindingsReceived(org.json.JSONObject):732:750 -> b
+    93:93:void handleEditorBindingsReceived(org.json.JSONObject):735:735 -> b
+    1:13:void handleEditorChangeReceived(org.json.JSONObject):650:662 -> c
+    14:15:android.content.SharedPreferences getSharedPreferences():922:923 -> c
+    1:13:void handleEditorTweaksReceived(org.json.JSONObject):688:700 -> d
+    14:27:void handleEditorClosed():757:770 -> d
+    1:53:void initializeChanges():374:426 -> e
+    54:91:void sendSnapshot(org.json.JSONObject):573:610 -> e
+    92:97:void sendSnapshot(org.json.JSONObject):607:612 -> e
+    98:102:void sendSnapshot(org.json.JSONObject):610:614 -> e
+    103:104:void sendSnapshot(org.json.JSONObject):583:584 -> e
+    105:106:void sendSnapshot(org.json.JSONObject):579:580 -> e
+    1:20:void loadKnownChanges():345:364 -> f
+    1:46:void sendDeviceInfo():506:551 -> g
+    47:48:void sendDeviceInfo():547:548 -> g
+    49:51:void sendDeviceInfo():542:544 -> g
+    52:54:void sendDeviceInfo():537:539 -> g
+    55:84:void sendDeviceInfo():533:562 -> g
+    85:90:void sendDeviceInfo():559:564 -> g
+    91:95:void sendDeviceInfo():562:566 -> g
+    1:1:void start():282:282 -> h
+    1:46:void handleMessage(android.os.Message):287:332 -> handleMessage
+    47:47:void handleMessage(android.os.Message):326:326 -> handleMessage
+    48:48:void handleMessage(android.os.Message):323:323 -> handleMessage
+    49:67:void handleMessage(android.os.Message):311:329 -> handleMessage
+    68:80:void handleMessage(android.os.Message):308:320 -> handleMessage
+    81:81:void handleMessage(android.os.Message):317:317 -> handleMessage
+    82:94:void handleMessage(android.os.Message):302:314 -> handleMessage
+    95:95:void handleMessage(android.os.Message):305:305 -> handleMessage
+    96:96:void handleMessage(android.os.Message):299:299 -> handleMessage
+    97:141:void handleMessage(android.os.Message):292:336 -> handleMessage
+com.zhuge.analysis.viewSpider.ViewSnapConfig -> com.zhuge.analysis.c.n:
+    1:1:org.json.JSONObject getViewSnapConfig():294:294 -> a
+com.zhuge.analysis.viewSpider.ViewSnapshot -> com.zhuge.analysis.c.o:
+    java.util.List mProperties -> b
+    android.os.Handler mMainThreadHandler -> d
+    com.zhuge.analysis.metrics.ResourceIds mResourceIds -> e
+    com.zhuge.analysis.viewSpider.ViewSnapshot$RootViewFinder mRootViewFinder -> a
+    com.zhuge.analysis.viewSpider.ViewSnapshot$ClassNameCache mClassnameCache -> c
+    1:6:void <init>(java.util.List,com.zhuge.analysis.metrics.ResourceIds):50:55 -> <init>
+    1:15:void snapshots(com.zhuge.analysis.viewSpider.UIThreadSet,java.io.OutputStream):64:78 -> a
+    16:16:void snapshots(com.zhuge.analysis.viewSpider.UIThreadSet,java.io.OutputStream):76:76 -> a
+    17:55:void snapshots(com.zhuge.analysis.viewSpider.UIThreadSet,java.io.OutputStream):74:112 -> a
+    56:94:void addProperties(android.util.JsonWriter,android.view.View):227:265 -> a
+    1:91:void snapshotView(android.util.JsonWriter,android.view.View):129:219 -> b
+    1:3:void snapshotViewHierarchy(android.util.JsonWriter,android.view.View):122:124 -> c
+com.zhuge.analysis.viewSpider.ViewSnapshot$CachedBitmap -> com.zhuge.analysis.c.o$a:
+    android.graphics.Bitmap mCached -> a
+    android.graphics.Paint mPaint -> b
+    1:3:void <init>():381:383 -> <init>
+    1:15:void recreate(int,int,int,android.graphics.Bitmap):387:401 -> a
+    16:23:void writeBitmapJSON(android.graphics.Bitmap$CompressFormat,int,java.io.OutputStream):408:415 -> a
+    24:24:void writeBitmapJSON(android.graphics.Bitmap$CompressFormat,int,java.io.OutputStream):409:409 -> a
+com.zhuge.analysis.viewSpider.ViewSnapshot$ClassNameCache -> com.zhuge.analysis.c.o$b:
+    1:1:void <init>(int):273:273 -> <init>
+    1:1:java.lang.String create(java.lang.Class):278:278 -> a
+    1:1:java.lang.Object create(java.lang.Object):271:271 -> create
+com.zhuge.analysis.viewSpider.ViewSnapshot$RootViewFinder -> com.zhuge.analysis.c.o$c:
+    java.util.List mRootViews -> b
+    com.zhuge.analysis.viewSpider.UIThreadSet mLiveActivities -> a
+    com.zhuge.analysis.viewSpider.ViewSnapshot$CachedBitmap mCachedBitmap -> d
+    android.util.DisplayMetrics mDisplayMetrics -> c
+    1:4:void <init>():283:286 -> <init>
+    1:1:void findInActivities(com.zhuge.analysis.viewSpider.UIThreadSet):290:290 -> a
+    2:19:java.util.List call():295:312 -> a
+    20:36:void takeScreenshot(com.zhuge.analysis.viewSpider.ViewSnapshot$RootViewInfo):316:332 -> a
+    37:37:void takeScreenshot(com.zhuge.analysis.viewSpider.ViewSnapshot$RootViewInfo):330:330 -> a
+    38:38:void takeScreenshot(com.zhuge.analysis.viewSpider.ViewSnapshot$RootViewInfo):328:328 -> a
+    39:39:void takeScreenshot(com.zhuge.analysis.viewSpider.ViewSnapshot$RootViewInfo):326:326 -> a
+    40:85:void takeScreenshot(com.zhuge.analysis.viewSpider.ViewSnapshot$RootViewInfo):324:369 -> a
+    1:1:java.lang.Object call():282:282 -> call
+com.zhuge.analysis.viewSpider.ViewSnapshot$RootViewInfo -> com.zhuge.analysis.c.o$d:
+    com.zhuge.analysis.viewSpider.ViewSnapshot$CachedBitmap screenshot -> c
+    float scale -> d
+    java.lang.String activityName -> a
+    android.view.View rootView -> b
+    1:5:void <init>(java.lang.String,android.view.View):424:428 -> <init>
+com.zhuge.analysis.viewSpider.ViewVisitor -> com.zhuge.analysis.c.p:
+    java.util.List mPath -> a
+    com.zhuge.analysis.viewSpider.Pathfinder mPathfinder -> b
+    1:3:void <init>(java.util.List):604:606 -> <init>
+    void cleanup() -> a
+    1:1:void visit(android.view.View):595:595 -> b
+    2:2:java.util.List getPath():610:610 -> b
+    1:1:com.zhuge.analysis.viewSpider.Pathfinder getPathfinder():614:614 -> c
+com.zhuge.analysis.viewSpider.ViewVisitor$1 -> com.zhuge.analysis.c.p$a:
+com.zhuge.analysis.viewSpider.ViewVisitor$AddAccessibilityEventVisitor -> com.zhuge.analysis.c.p$b:
+    java.util.WeakHashMap mWatching -> g
+    int mEventType -> f
+    1:3:void <init>(java.util.List,int,java.lang.String,com.zhuge.analysis.viewSpider.ViewVisitor$OnEventListener):354:356 -> <init>
+    1:1:int access$100(com.zhuge.analysis.viewSpider.ViewVisitor$AddAccessibilityEventVisitor):352:352 -> a
+    2:16:void cleanup():361:375 -> a
+    17:36:void accumulate(android.view.View):380:399 -> a
+    1:1:void visit(android.view.View):352:352 -> b
+    1:9:android.view.View$AccessibilityDelegate getOldDelegate(android.view.View):412:420 -> d
+com.zhuge.analysis.viewSpider.ViewVisitor$AddAccessibilityEventVisitor$TrackingAccessibilityDelegate -> com.zhuge.analysis.c.p$b$a:
+    android.view.View$AccessibilityDelegate mRealDelegate -> a
+    com.zhuge.analysis.viewSpider.ViewVisitor$AddAccessibilityEventVisitor this$0 -> b
+    1:2:void <init>(com.zhuge.analysis.viewSpider.ViewVisitor$AddAccessibilityEventVisitor,android.view.View$AccessibilityDelegate):427:428 -> <init>
+    1:1:android.view.View$AccessibilityDelegate getRealDelegate():432:432 -> a
+    2:5:boolean willFireEvent(java.lang.String):436:439 -> a
+    6:10:void removeFromDelegateChain(com.zhuge.analysis.viewSpider.ViewVisitor$AddAccessibilityEventVisitor$TrackingAccessibilityDelegate):446:450 -> a
+    1:6:void sendAccessibilityEvent(android.view.View,int):458:463 -> sendAccessibilityEvent
+com.zhuge.analysis.viewSpider.ViewVisitor$AddTextChangeListener -> com.zhuge.analysis.c.p$c:
+    java.util.Map mWatching -> f
+    1:2:void <init>(java.util.List,java.lang.String,com.zhuge.analysis.viewSpider.ViewVisitor$OnEventListener):479:480 -> <init>
+    1:7:void cleanup():485:491 -> a
+    8:16:void accumulate(android.view.View):496:504 -> a
+    1:1:void visit(android.view.View):477:477 -> b
+com.zhuge.analysis.viewSpider.ViewVisitor$AddTextChangeListener$TrackingTextWatcher -> com.zhuge.analysis.c.p$c$a:
+    com.zhuge.analysis.viewSpider.ViewVisitor$AddTextChangeListener this$0 -> b
+    android.view.View mBoundTo -> a
+    1:2:void <init>(com.zhuge.analysis.viewSpider.ViewVisitor$AddTextChangeListener,android.view.View):514:515 -> <init>
+    1:1:void afterTextChanged(android.text.Editable):530:530 -> afterTextChanged
+com.zhuge.analysis.viewSpider.ViewVisitor$CycleDetector -> com.zhuge.analysis.c.p$d:
+    1:1:void <init>():144:144 -> <init>
+    2:2:void <init>(com.zhuge.analysis.viewSpider.ViewVisitor$1):144:144 -> <init>
+    1:4:boolean hasCycle(java.util.TreeMap):154:157 -> a
+    5:20:boolean detectSubgraphCycle(java.util.TreeMap,android.view.View,java.util.List):167:182 -> a
+com.zhuge.analysis.viewSpider.ViewVisitor$EventTriggeringVisitor -> com.zhuge.analysis.c.p$e:
+    boolean mDebounce -> e
+    com.zhuge.analysis.viewSpider.ViewVisitor$OnEventListener mListener -> c
+    java.lang.String mEventName -> d
+    1:4:void <init>(java.util.List,java.lang.String,com.zhuge.analysis.viewSpider.ViewVisitor$OnEventListener,boolean):572:575 -> <init>
+    1:1:void fireEvent(android.view.View):579:579 -> c
+    1:1:java.lang.String getEventName():583:583 -> d
+com.zhuge.analysis.viewSpider.ViewVisitor$LayoutRule -> com.zhuge.analysis.c.p$f:
+    int verb -> b
+    int anchor -> c
+    int viewId -> a
+    1:4:void <init>(int,int,int):338:341 -> <init>
+com.zhuge.analysis.viewSpider.ViewVisitor$LayoutUpdateVisitor -> com.zhuge.analysis.c.p$g:
+    java.util.Set mHorizontalRules -> g
+    java.util.Set mVerticalRules -> h
+    java.util.List mArgs -> d
+    boolean mAlive -> e
+    com.zhuge.analysis.viewSpider.ViewVisitor$CycleDetector mCycleDetector -> f
+    java.util.WeakHashMap mOriginalValues -> c
+    1:3:void <clinit>():324:326 -> <clinit>
+    4:11:void <clinit>():324:331 -> <clinit>
+    12:12:void <clinit>():328:328 -> <clinit>
+    1:6:void <init>(java.util.List,java.util.List,java.lang.String):192:197 -> <init>
+    1:10:void cleanup():203:212 -> a
+    11:60:void accumulate(android.view.View):228:277 -> a
+    61:92:boolean verifyLayout(java.util.Set,android.util.SparseArray):283:314 -> a
+    1:2:void visit(android.view.View):220:221 -> b
+com.zhuge.analysis.viewSpider.ViewVisitor$LayoutUpdateVisitor$1 -> com.zhuge.analysis.c.p$g$a:
+    1:1:void <init>(com.zhuge.analysis.viewSpider.ViewVisitor$LayoutUpdateVisitor):283:283 -> <init>
+    1:1:int compare(android.view.View,android.view.View):293:293 -> a
+    1:1:int compare(java.lang.Object,java.lang.Object):283:283 -> compare
+com.zhuge.analysis.viewSpider.ViewVisitor$OnEventListener -> com.zhuge.analysis.c.p$h:
+    void OnEvent(android.view.View,java.lang.String,boolean) -> a
+com.zhuge.analysis.viewSpider.ViewVisitor$PropertySetVisitor -> com.zhuge.analysis.c.p$i:
+    com.zhuge.analysis.viewSpider.Caller mAccessor -> d
+    com.zhuge.analysis.viewSpider.Caller mMutator -> c
+    java.util.WeakHashMap mOriginalValues -> e
+    java.lang.Object[] mOriginalValueHolder -> f
+    1:5:void <init>(java.util.List,com.zhuge.analysis.viewSpider.Caller,com.zhuge.analysis.viewSpider.Caller):67:71 -> <init>
+    1:6:void cleanup():76:81 -> a
+    7:50:void accumulate(android.view.View):88:131 -> a
+    1:1:void visit(android.view.View):65:65 -> b
+com.zhuge.analysis.viewSpider.ViewVisitor$ViewDetectorVisitor -> com.zhuge.analysis.c.p$j:
+    boolean mSeen -> f
+    1:2:void <init>(java.util.List,java.lang.String,com.zhuge.analysis.viewSpider.ViewVisitor$OnEventListener):545:546 -> <init>
+    void cleanup() -> a
+    1:4:void accumulate(android.view.View):556:559 -> a
+    1:1:void visit(android.view.View):543:543 -> b

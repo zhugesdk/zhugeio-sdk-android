@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery.min.js"></script>
+    <title>私有部署数据测试</title>
+    <style>
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .form{
+            border: 1px solid lightgray;
+            padding: 5px;
+            width: 90%;
+            margin: 5px auto;
+            max-width: 300px;
+        }
+        input[type='text']{
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 5px;
+        }
+        fieldset{
+            margin-bottom: 5px;
+        }
+        button{
+            height: 30px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <script type = "text/javascript">
+      (function() {
+        if (window.zhuge) return;
+        window.zhuge = [];
+        window.zhuge.methods = "_init identify track trackRevenue getDid getSid getKey setSuperProperty setUserProperties setWxProperties setPlatform".split(" ");
+        window.zhuge.factory = function(b) {
+          return function() {
+            var a = Array.prototype.slice.call(arguments);
+            a.unshift(b);
+            window.zhuge.push(a);
+            return window.zhuge;
+          }
+        };
+        for (var i = 0; i < window.zhuge.methods.length; i++) {
+          var key = window.zhuge.methods[i];
+          window.zhuge[key] = window.zhuge.factory(key);
+        }
+        window.zhuge.load = function(b, x) {
+          if (!document.getElementById("zhuge-js")) {
+            var a = document.createElement("script");
+            var verDate = new Date();
+            var verStr = verDate.getFullYear().toString() + verDate.getMonth().toString() + verDate.getDate().toString();
+
+            a.type = "text/javascript";
+            a.id = "zhuge-js";
+            a.async = !0;
+            a.src = 'https://zgsdk.zhugeio.com/zhuge.min.js?v=' + verStr;
+            a.onerror = function() {
+              window.zhuge.identify = window.zhuge.track = function(ename, props, callback) {
+                if(callback && Object.prototype.toString.call(callback) === '[object Function]') {
+                  callback();
+                } else if (Object.prototype.toString.call(props) === '[object Function]') {
+                  props();
+                }
+              };
+            };
+            var c = document.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(a, c);
+            window.zhuge._init(b, x)
+          }
+        };
+        window.zhuge.load('49f68c16d944451799ce498a63886f5e', { //配置应用的AppKey
+          superProperty: { //全局的事件属性(选填)
+            '应用名称': '诸葛io_test'
+          },
+          adTrack: false,//广告监测开关，默认为false
+          zgsee: false,//视屏采集开关， 默认为false
+          autoTrack: true,
+          //启用全埋点采集（选填，默认false）
+          singlePage: false, //是否是单页面应用（SPA），启用autoTrack后生效（选填，默认false）
+          debug: true,
+          autoUploadByApp: true
+        });
+      })();
+    </script>
+</head>
+<body>
+    <a href="http://www.baidu.com" target="_blank">跳转页面</a>
+    <div class="form">
+    <input id="name" type="text" placeholder="事件名称/用户ID">
+    <button id="addProp">添加自定义属性</button>
+    <div id="toProp">
+
+    </div>
+    <button id="track">track</button>
+    <button id="trackRevenue">trackRevenue</button>
+    <button id="identify">identify</button>
+   
+</div>
+<script>
+    $("#addProp").click(function () {
+        $('#toProp').append('<fieldset>' +
+                '<legend>prop</legend>' +
+                '<input type="text" class="name" placeholder="name"/> ' +
+                '<input type="text" class="value" placeholder="value">' +
+                '<p class="form-item"><span>属性值是数值类型</span><input class="number" type="checkbox"></p>' +
+                '</fieldset>');
+    });
+    function getProps() {
+        var props = {};
+        $('fieldset').each(function () {
+            var key = $(this).find('.name').val().trim(),
+                    val = $(this).find('.value').val().trim();
+            if(!key)return;
+            props[key] = val;
+        });
+        return props;
+    }
+    $("#track").click(function () {
+        zhuge.track($("#name").val(), getProps());
+       
+    });
+    $("#trackRevenue").click(function () {
+     zhuge.trackRevenue({
+        'price': 229,
+        'productID':'小米NFC手环',
+        'productQuantity':2,
+        'revenueType':'智能设备',
+        });
+    });
+
+    $('#identify').click(function () {
+        zhuge.identify($("#name").val(), getProps());
+    });
+
+    $('#identifyCross').click(function () {
+        zhuge.identifyCross($("#crossId").val());
+    });
+</script>
+</body>
+</html>
